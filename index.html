@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Táctika Consulting | Asesoría para PyMEs</title>
+<title>Táctika Consulting | Asesoría PyME</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -16,33 +16,31 @@
 }
 
 body {
-    background: #f6f7f9;
+    background: #f4f6f8;
     color: #222;
-    line-height: 1.6;
 }
 
-/* HEADER */
+/* HERO */
 header {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: #0f2027;
     color: #fff;
     padding: 70px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.1rem;
     opacity: 0.9;
 }
 
 .btn {
-    display: inline-block;
     margin-top: 25px;
-    padding: 14px 28px;
+    display: inline-block;
+    padding: 14px 26px;
     background: #25D366;
     color: #fff;
     text-decoration: none;
@@ -57,52 +55,59 @@ section {
     padding: 60px 20px;
 }
 
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
+.section-box {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    margin-bottom: 50px;
 }
 
-/* PASOS / SERVICIOS */
-.grid {
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* LISTA VIÑETAS */
+.bullets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.bullet {
+    padding: 20px;
+    border-left: 5px solid #2c5364;
+    background: #f9fafb;
+    border-radius: 10px;
+}
+
+/* PRECIOS */
+.prices {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
-.card {
-    background: #fff;
+.price-card {
+    border: 2px solid #2c5364;
+    border-radius: 16px;
     padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: transform .3s;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h3 {
+.price-card h3 {
     margin-bottom: 10px;
-    color: #2c5364;
 }
 
-/* PRECIOS */
-.price {
+.amount {
     font-size: 2rem;
     font-weight: 700;
     margin: 15px 0;
 }
 
-/* FORMULARIO */
-form {
-    background: #fff;
-    padding: 35px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-input, textarea {
+/* FORM */
+form input, form textarea {
     width: 100%;
     padding: 14px;
     margin-bottom: 15px;
@@ -110,7 +115,7 @@ input, textarea {
     border: 1px solid #ccc;
 }
 
-button {
+form button {
     width: 100%;
     padding: 15px;
     background: #2c5364;
@@ -118,7 +123,6 @@ button {
     border: none;
     border-radius: 8px;
     font-size: 1rem;
-    cursor: pointer;
 }
 
 /* FOOTER */
@@ -126,21 +130,21 @@ footer {
     background: #0f2027;
     color: #fff;
     text-align: center;
-    padding: 25px 15px;
-    font-size: 0.9rem;
+    padding: 25px;
+    font-size: .9rem;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #25D366;
     color: #fff;
-    padding: 15px 18px;
+    padding: 16px;
     border-radius: 50%;
-    font-size: 22px;
     text-decoration: none;
+    font-size: 22px;
 }
 </style>
 </head>
@@ -149,88 +153,72 @@ footer {
 
 <header>
     <h1>Táctika Consulting</h1>
-    <p>Asesoría estratégica, administrativa y financiera para emprendedores y PyMEs</p>
-    <a class="btn" href="https://wa.me/56964295330" target="_blank">Hablar por WhatsApp</a>
+    <p>Ordenamos tu negocio y mejoramos tus resultados</p>
+    <a class="btn" href="https://wa.me/56964295330" target="_blank">WhatsApp Directo</a>
 </header>
 
 <section>
-    <h2>¿Qué hacemos?</h2>
-    <div class="grid">
-        <div class="card paso">
-            <h3>Diagnóstico Empresarial</h3>
-            <p>Analizamos tu negocio en lo administrativo, comercial y financiero para detectar errores, fugas de dinero y oportunidades reales.</p>
-        </div>
-        <div class="card paso">
-            <h3>Plan de Acción</h3>
-            <p>Te entregamos un plan claro, paso a paso, enfocado en mejorar resultados y ordenar tu empresa.</p>
-        </div>
-        <div class="card paso">
-            <h3>Acompañamiento</h3>
-            <p>No te dejamos solo. Te guiamos en la implementación y seguimiento de las mejoras.</p>
-        </div>
+
+<div class="section-box">
+<h2>¿Cómo te ayudamos?</h2>
+<div class="bullets">
+    <div class="bullet">
+        <strong>Diagnóstico Empresarial</strong><br>
+        Revisamos finanzas, gestión y procesos.
     </div>
-</section>
-
-<section>
-    <h2>Planes y Precios</h2>
-    <div class="grid">
-        <div class="card paso">
-            <h3>Diagnóstico Inicial</h3>
-            <p class="price">$120.000</p>
-            <p>✔ Revisión financiera<br>✔ Informe claro<br>✔ Recomendaciones inmediatas</p>
-        </div>
-
-        <div class="card paso">
-            <h3>Plan de Gestión Mensual</h3>
-            <p class="price">$250.000</p>
-            <p>✔ Control financiero<br>✔ Reportes mensuales<br>✔ Reunión estratégica</p>
-        </div>
-
-        <div class="card paso">
-            <h3>Plan Integral PyME</h3>
-            <p class="price">$400.000</p>
-            <p>✔ Diagnóstico completo<br>✔ Plan de acción<br>✔ Acompañamiento mensual</p>
-        </div>
+    <div class="bullet">
+        <strong>Plan de Acción</strong><br>
+        Pasos claros, priorizados y ejecutables.
     </div>
-</section>
+    <div class="bullet">
+        <strong>Acompañamiento</strong><br>
+        Seguimiento real, no solo teoría.
+    </div>
+</div>
+</div>
 
-<section>
-    <h2>Contáctanos</h2>
-    <form action="mailto:contacto@tactikaconsulting.com" method="post" enctype="text/plain">
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="email" name="correo" placeholder="Correo" required>
-        <textarea name="mensaje" placeholder="Cuéntanos tu situación" rows="4"></textarea>
-        <button type="submit">Enviar</button>
-    </form>
+<div class="section-box">
+<h2>Planes y Precios</h2>
+<div class="prices">
+    <div class="price-card">
+        <h3>Diagnóstico Inicial</h3>
+        <div class="amount">$120.000</div>
+        Informe + recomendaciones
+    </div>
+
+    <div class="price-card">
+        <h3>Gestión Mensual</h3>
+        <div class="amount">$250.000</div>
+        Control + reportes + reunión
+    </div>
+
+    <div class="price-card">
+        <h3>Plan Integral PyME</h3>
+        <div class="amount">$400.000</div>
+        Diagnóstico + plan + seguimiento
+    </div>
+</div>
+</div>
+
+<div class="section-box">
+<h2>Formulario de Contacto</h2>
+<form action="mailto:contacto@tactikaconsulting.com" method="post">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo" required>
+    <textarea placeholder="Cuéntanos tu negocio" rows="4"></textarea>
+    <button>Enviar</button>
+</form>
+</div>
+
 </section>
 
 <footer>
-    <p>📧 contacto@tactikaconsulting.com | 📱 +56 9 6429 5330</p>
-    <p>© 2026 Táctika Consulting</p>
+<p>📧 contacto@tactikaconsulting.com | 📱 +56 9 6429 5330</p>
+<p>© 2026 Táctika Consulting</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/56964295330" target="_blank">💬</a>
 
-<script>
-// Animaciones al hacer scroll
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    });
-
-    document.querySelectorAll('.paso').forEach(el => {
-        el.style.opacity = 0;
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all .6s ease';
-        observer.observe(el);
-    });
-});
-</script>
-
 </body>
 </html>
+
