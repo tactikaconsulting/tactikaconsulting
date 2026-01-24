@@ -19,13 +19,13 @@ body {
 
 .logo {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
 .logo img {
-  height: 50px;
+  height: 55px;
 }
 
 .hero {
@@ -38,21 +38,29 @@ body {
   margin-top: 20px;
   background: #25d366;
   color: white;
-  padding: 12px 25px;
+  padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
 }
 
-.como-funciona, .servicios, .precios, .formulario {
-  padding: 40px 20px;
+.como-funciona,
+.servicios,
+.precios,
+.formulario {
   max-width: 1000px;
   margin: auto;
+  padding: 40px 20px;
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .pasos {
@@ -63,7 +71,7 @@ h2 {
 .paso {
   background: white;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 .servicios ul {
@@ -72,14 +80,14 @@ h2 {
   gap: 10px;
 }
 
-.precios .cards {
+.cards {
   display: grid;
   gap: 20px;
 }
 
 .card {
   background: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 15px;
   text-align: center;
 }
@@ -88,12 +96,18 @@ h2 {
   border: 3px solid #0072ff;
 }
 
+.card strong {
+  display: block;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
 .card a {
   display: inline-block;
   margin-top: 15px;
   background: #0072ff;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 20px;
   text-decoration: none;
 }
@@ -104,9 +118,9 @@ h2 {
 }
 
 .formulario input,
-.formulario textarea,
-.formulario select {
-  padding: 10px;
+.formulario select,
+.formulario textarea {
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
@@ -115,8 +129,8 @@ h2 {
   background: #00c6ff;
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 20px;
+  padding: 14px;
+  border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -126,5 +140,4 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
 }
