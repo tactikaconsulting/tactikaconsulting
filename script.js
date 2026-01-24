@@ -18,4 +18,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   pasos.forEach(paso => observer.observe(paso));
 });
-
