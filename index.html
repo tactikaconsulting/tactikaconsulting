@@ -38,24 +38,11 @@
   </div>
 </section>
 
-<section class="servicios">
-  <h2>¿Qué puedes cotizar?</h2>
-  <ul>
-    <li>🏠 Bienes para el hogar</li>
-    <li>🚗 Servicios y reparaciones</li>
-    <li>📱 Tecnología</li>
-    <li>🎉 Eventos</li>
-    <li>🛠️ Servicios técnicos</li>
-    <li>📦 Cualquier producto o servicio</li>
-  </ul>
-</section>
-
 <section class="precios">
   <h2>Planes y Precios</h2>
   <p class="subtitulo">Elige el plan que mejor se adapte a lo que necesitas</p>
 
   <div class="cards">
-
     <div class="card">
       <h3>Plan Básico</h3>
       <p>1 bien o servicio</p>
@@ -79,29 +66,28 @@
       <strong>$29.990 CLP</strong>
       <a href="https://mpago.la/1QiddBU" target="_blank">💳 Pagar ahora</a>
     </div>
-
   </div>
 </section>
 
 <section class="formulario">
   <h2>Solicita tu cotización</h2>
 
-  <form>
-    <input type="text" placeholder="Nombre" required>
-    <input type="text" placeholder="WhatsApp" required>
-    <input type="email" placeholder="Correo electrónico" required>
+  <form id="form-whatsapp">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="whatsapp" placeholder="WhatsApp" required>
+    <input type="email" id="correo" placeholder="Correo electrónico" required>
 
-    <select required>
+    <select id="tipo" required>
       <option value="">¿Qué necesitas cotizar?</option>
       <option>Bien</option>
       <option>Servicio</option>
       <option>Ambos</option>
     </select>
 
-    <textarea placeholder="Describe lo que necesitas" required></textarea>
-    <input type="number" placeholder="Presupuesto estimado (opcional)">
+    <textarea id="detalle" placeholder="Describe lo que necesitas" required></textarea>
+    <input type="number" id="presupuesto" placeholder="Presupuesto estimado (opcional)">
 
-    <button type="submit">Enviar solicitud</button>
+    <button type="submit">Enviar por WhatsApp</button>
   </form>
 </section>
 
