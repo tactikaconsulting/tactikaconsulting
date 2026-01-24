@@ -9,7 +9,7 @@
 body{
   margin:0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background:#f5f7fb;
+  background:#f4f7fb;
   color:#1f2933;
 }
 
@@ -20,17 +20,14 @@ header{
   padding:60px 20px;
   text-align:center;
 }
-
 header img{
-  width:110px;
+  width:120px;
   margin-bottom:15px;
 }
-
 header h1{
   margin:0;
-  font-size:2.4rem;
+  font-size:2.5rem;
 }
-
 header p{
   margin-top:10px;
   font-size:1.1rem;
@@ -43,7 +40,6 @@ section{
   margin:50px auto;
   padding:0 20px;
 }
-
 .box{
   background:#fff;
   border-radius:18px;
@@ -51,7 +47,6 @@ section{
   margin-bottom:35px;
   box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
-
 h2{
   text-align:center;
   margin-bottom:25px;
@@ -64,13 +59,11 @@ h2{
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:18px;
 }
-
 .item{
   background:#f1f5f9;
   padding:18px;
   border-left:6px solid #06b6d4;
   border-radius:10px;
-  font-size:1rem;
 }
 
 /* PRECIOS */
@@ -79,19 +72,16 @@ h2{
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
 }
-
 .price{
   border:3px solid #2563eb;
   border-radius:18px;
   padding:30px;
   text-align:center;
 }
-
 .price h3{
   margin-top:0;
   color:#2563eb;
 }
-
 .price strong{
   font-size:2rem;
   display:block;
@@ -99,12 +89,28 @@ h2{
   color:#06b6d4;
 }
 
+/* BOTON PAGO */
+.pay-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:14px 24px;
+  background:#00b1ea;
+  color:#fff;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:700;
+  transition:.2s;
+}
+.pay-btn:hover{
+  background:#0099cc;
+  transform:scale(1.05);
+}
+
 /* FORM */
 form{
   display:grid;
   gap:14px;
 }
-
 input, select, textarea{
   width:100%;
   padding:14px;
@@ -112,7 +118,6 @@ input, select, textarea{
   border:1px solid #cbd5e1;
   font-size:1rem;
 }
-
 button{
   margin-top:10px;
   padding:16px;
@@ -169,7 +174,7 @@ footer{
 </div>
 </div>
 
-<!-- QUÉ CUBRE -->
+<!-- COBERTURA -->
 <div class="box">
 <h2>¿Qué tipo de compras asesoramos?</h2>
 <div class="list">
@@ -178,31 +183,38 @@ footer{
   <div class="item">📱 Tecnología y electrodomésticos</div>
   <div class="item">🛠️ Servicios, cursos y contrataciones</div>
   <div class="item">🏥 Salud, educación y seguros</div>
-  <div class="item">🎉 Eventos, viajes y experiencias</div>
+  <div class="item">🎉 Viajes, eventos y experiencias</div>
 </div>
 </div>
 
 <!-- PRECIOS -->
 <div class="box">
 <h2>Precios simples y accesibles</h2>
+
 <div class="prices">
 
   <div class="price">
     <h3>Compra Simple</h3>
     <strong>$9.990</strong>
     Compras pequeñas o cotización rápida
+    <br>
+    <a href="https://mpago.la/27Nxe1T" target="_blank" class="pay-btn">Pagar ahora</a>
   </div>
 
   <div class="price">
     <h3>Compra Guiada</h3>
     <strong>$19.990</strong>
     3 alternativas + asesoría directa
+    <br>
+    <a href="https://mpago.la/27VNeRU" target="_blank" class="pay-btn">Pagar ahora</a>
   </div>
 
   <div class="price">
     <h3>Compra Importante</h3>
     <strong>$29.990</strong>
     Decisiones relevantes o alto monto
+    <br>
+    <a href="https://mpago.la/1QiddBU" target="_blank" class="pay-btn">Pagar ahora</a>
   </div>
 
 </div>
@@ -213,12 +225,11 @@ footer{
 <h2>Solicita tu asesoría</h2>
 
 <form action="mailto:contacto@tactikaconsulting.com" method="post">
-
   <input type="text" placeholder="Nombre completo" required>
   <input type="email" placeholder="Correo electrónico" required>
 
   <select required>
-    <option value="">¿Qué tipo de compra es?</option>
+    <option value="">Tipo de compra</option>
     <option>Bien (producto)</option>
     <option>Servicio</option>
     <option>Arriendo</option>
