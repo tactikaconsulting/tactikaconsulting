@@ -1,176 +1,236 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Táctika Consulting | Asesoría para PyMEs</title>
 
-  <title>Tactika Consulting | Compra Inteligente</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <meta name="description" content="Asesoría de compra inteligente. Comparamos opciones, analizamos el mercado y te recomendamos la mejor decisión.">
-  <meta name="author" content="Tactika Consulting">
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
 
-  <link rel="stylesheet" href="./styles.css">
-  <link rel="icon" type="image/png" href="./logo.png">
+body {
+    background: #f6f7f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* SECCIONES */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* PASOS / SERVICIOS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2c5364;
+}
+
+/* PRECIOS */
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+/* FORMULARIO */
+form {
+    background: #fff;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #2c5364;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: #0f2027;
+    color: #fff;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 0.9rem;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: #fff;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header paso">
-  <div class="brand">
-    <img src="./logo.png" alt="Tactika Consulting" class="logo">
-    <span class="brand-name">Tactika Consulting</span>
-  </div>
-
-  <nav class="nav">
-    <a href="#servicios">Servicios</a>
-    <a href="#precios">Precios</a>
-    <a href="#formulario">Formulario</a>
-    <a href="https://wa.me/56964295330" target="_blank">WhatsApp</a>
-  </nav>
+<header>
+    <h1>Táctika Consulting</h1>
+    <p>Asesoría estratégica, administrativa y financiera para emprendedores y PyMEs</p>
+    <a class="btn" href="https://wa.me/56964295330" target="_blank">Hablar por WhatsApp</a>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-text paso">
-    <h1>🧠 Compra Inteligente</h1>
-
-    <p>
-      Comprar mal cuesta dinero, tiempo y estrés.
-      En <strong>Tactika Consulting</strong> analizamos el mercado por ti
-      y te entregamos una <strong>recomendación clara, objetiva y honesta</strong>.
-    </p>
-
-    <div class="buttons">
-      <a href="#precios" class="btn primary">Ver precios</a>
-      <a href="https://wa.me/56964295330" target="_blank" class="btn secondary">WhatsApp directo</a>
+<section>
+    <h2>¿Qué hacemos?</h2>
+    <div class="grid">
+        <div class="card paso">
+            <h3>Diagnóstico Empresarial</h3>
+            <p>Analizamos tu negocio en lo administrativo, comercial y financiero para detectar errores, fugas de dinero y oportunidades reales.</p>
+        </div>
+        <div class="card paso">
+            <h3>Plan de Acción</h3>
+            <p>Te entregamos un plan claro, paso a paso, enfocado en mejorar resultados y ordenar tu empresa.</p>
+        </div>
+        <div class="card paso">
+            <h3>Acompañamiento</h3>
+            <p>No te dejamos solo. Te guiamos en la implementación y seguimiento de las mejoras.</p>
+        </div>
     </div>
-  </div>
-
-  <div class="card paso">
-    <ul>
-      <li>✅ Decisiones informadas</li>
-      <li>📊 Comparación real</li>
-      <li>⏱️ Ahorro de tiempo</li>
-      <li>💬 Asesoría imparcial</li>
-    </ul>
-  </div>
 </section>
 
-<!-- SERVICIOS -->
-<section id="servicios" class="section">
-  <h2 class="paso">¿En qué te ayudamos?</h2>
+<section>
+    <h2>Planes y Precios</h2>
+    <div class="grid">
+        <div class="card paso">
+            <h3>Diagnóstico Inicial</h3>
+            <p class="price">$120.000</p>
+            <p>✔ Revisión financiera<br>✔ Informe claro<br>✔ Recomendaciones inmediatas</p>
+        </div>
 
-  <div class="pasos">
-    <div class="paso-card paso">🏠 Compra o arriendo de inmuebles</div>
-    <div class="paso-card paso">🚗 Compra de vehículos</div>
-    <div class="paso-card paso">🖥️ Tecnología y electrónica</div>
-    <div class="paso-card paso">🛠️ Servicios y contrataciones</div>
-  </div>
-</section>
+        <div class="card paso">
+            <h3>Plan de Gestión Mensual</h3>
+            <p class="price">$250.000</p>
+            <p>✔ Control financiero<br>✔ Reportes mensuales<br>✔ Reunión estratégica</p>
+        </div>
 
-<!-- PRECIOS -->
-<section id="precios" class="section section-light">
-  <h2 class="paso">Precios simples y claros</h2>
-
-  <p class="paso" style="text-align:center;max-width:700px;margin:auto">
-    Pagas por <strong>análisis y recomendación</strong>, no por venderte algo.
-    No recibimos comisiones ni tenemos acuerdos con proveedores.
-  </p>
-
-  <div class="pasos">
-
-    <div class="paso-card paso">
-      <h3>🔹 Asesoría Básica</h3>
-      <p><strong>$19.990 CLP</strong></p>
-      <ul>
-        <li>✔️ Análisis de tu necesidad</li>
-        <li>✔️ Comparación de opciones</li>
-        <li>✔️ Recomendación general</li>
-      </ul>
-      <p><em>Ideal para compras simples</em></p>
+        <div class="card paso">
+            <h3>Plan Integral PyME</h3>
+            <p class="price">$400.000</p>
+            <p>✔ Diagnóstico completo<br>✔ Plan de acción<br>✔ Acompañamiento mensual</p>
+        </div>
     </div>
-
-    <div class="paso-card paso">
-      <h3>⭐ Asesoría Completa</h3>
-      <p><strong>$39.990 CLP</strong></p>
-      <ul>
-        <li>✔️ Análisis personalizado</li>
-        <li>✔️ Comparación detallada</li>
-        <li>✔️ 3 alternativas recomendadas</li>
-        <li>✔️ Asesoría por WhatsApp</li>
-      </ul>
-      <p><em>La más solicitada</em></p>
-    </div>
-
-    <div class="paso-card paso">
-      <h3>💼 Asesoría Premium</h3>
-      <p><strong>Desde $69.990 CLP</strong></p>
-      <ul>
-        <li>✔️ Compras complejas</li>
-        <li>✔️ Inmuebles o vehículos</li>
-        <li>✔️ Evaluación de riesgos</li>
-        <li>✔️ Acompañamiento completo</li>
-      </ul>
-      <p><em>Para decisiones importantes</em></p>
-    </div>
-
-  </div>
 </section>
 
-<!-- TRANSPARENCIA -->
-<section class="section">
-  <h2 class="paso">Transparencia total</h2>
-
-  <ul class="paso" style="max-width:600px;margin:auto">
-    <li>❌ No vendemos productos</li>
-    <li>❌ No recibimos comisiones</li>
-    <li>❌ No empujamos decisiones</li>
-    <li>✔️ Tú decides con información clara</li>
-  </ul>
+<section>
+    <h2>Contáctanos</h2>
+    <form action="mailto:contacto@tactikaconsulting.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="correo" placeholder="Correo" required>
+        <textarea name="mensaje" placeholder="Cuéntanos tu situación" rows="4"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
 </section>
 
-<!-- FORMULARIO -->
-<section id="formulario" class="section section-light">
-  <h2 class="paso">Solicita tu asesoría</h2>
-
-  <form class="form paso">
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Correo" required>
-    <input type="text" placeholder="¿Qué necesitas comprar o arrendar?" required>
-    <textarea placeholder="Cuéntanos más detalles"></textarea>
-
-    <a href="https://wa.me/56964295330" target="_blank" class="btn primary">
-      Enviar solicitud
-    </a>
-  </form>
-</section>
-
-<!-- CTA FINAL -->
-<section class="section">
-  <h2 class="paso">Tomar una buena decisión empieza aquí</h2>
-
-  <div style="text-align:center" class="paso">
-    <a href="https://wa.me/56964295330" target="_blank" class="btn primary">
-      Hablar con un asesor
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer paso">
-  <p>
-    © 2026 Tactika Consulting ·
-    <a href="mailto:contacto@tactikaconsulting.com">
-      contacto@tactikaconsulting.com
-    </a>
-  </p>
+<footer>
+    <p>📧 contacto@tactikaconsulting.com | 📱 +56 9 6429 5330</p>
+    <p>© 2026 Táctika Consulting</p>
 </footer>
 
-<a href="https://wa.me/56964295330" target="_blank" class="whatsapp-float">💬</a>
+<a class="whatsapp" href="https://wa.me/56964295330" target="_blank">💬</a>
 
-<script src="./script.js"></script>
+<script>
+// Animaciones al hacer scroll
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    });
+
+    document.querySelectorAll('.paso').forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all .6s ease';
+        observer.observe(el);
+    });
+});
+</script>
 
 </body>
 </html>
-
