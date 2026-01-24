@@ -8,100 +8,120 @@
 <style>
 body{
   margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background:#f2f4f7;
-  color:#222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:#f5f7fb;
+  color:#1f2933;
 }
 
 /* HEADER */
 header{
-  background:#1f2933;
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
   color:#fff;
-  padding:50px 20px;
+  padding:60px 20px;
   text-align:center;
 }
+
+header img{
+  width:110px;
+  margin-bottom:15px;
+}
+
 header h1{
   margin:0;
-  font-size:2.2rem;
+  font-size:2.4rem;
 }
+
 header p{
   margin-top:10px;
   font-size:1.1rem;
-  opacity:.9;
+  opacity:.95;
 }
 
 /* SECCIONES */
 section{
-  max-width:1000px;
-  margin:40px auto;
+  max-width:1100px;
+  margin:50px auto;
   padding:0 20px;
 }
 
 .box{
   background:#fff;
-  border-radius:12px;
-  padding:30px;
-  margin-bottom:30px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  border-radius:18px;
+  padding:35px;
+  margin-bottom:35px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
 h2{
-  margin-bottom:20px;
   text-align:center;
+  margin-bottom:25px;
+  color:#2563eb;
 }
 
-/* VIÑETAS */
+/* LISTAS */
 .list{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:15px;
+  gap:18px;
 }
+
 .item{
-  background:#f9fafb;
-  padding:15px;
-  border-left:5px solid #2563eb;
-  border-radius:8px;
+  background:#f1f5f9;
+  padding:18px;
+  border-left:6px solid #06b6d4;
+  border-radius:10px;
+  font-size:1rem;
 }
 
 /* PRECIOS */
 .prices{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
+  gap:25px;
 }
+
 .price{
-  border:2px solid #2563eb;
-  border-radius:12px;
-  padding:25px;
+  border:3px solid #2563eb;
+  border-radius:18px;
+  padding:30px;
   text-align:center;
 }
+
 .price h3{
   margin-top:0;
-}
-.price strong{
-  font-size:1.8rem;
-  display:block;
-  margin:10px 0;
   color:#2563eb;
 }
 
-/* FORM */
-input, textarea{
-  width:100%;
-  padding:12px;
-  margin-bottom:12px;
-  border-radius:8px;
-  border:1px solid #ccc;
-  font-size:1rem;
+.price strong{
+  font-size:2rem;
+  display:block;
+  margin:15px 0;
+  color:#06b6d4;
 }
-button{
+
+/* FORM */
+form{
+  display:grid;
+  gap:14px;
+}
+
+input, select, textarea{
   width:100%;
   padding:14px;
-  background:#2563eb;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+  font-size:1rem;
+}
+
+button{
+  margin-top:10px;
+  padding:16px;
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
   color:#fff;
   border:none;
-  border-radius:8px;
-  font-size:1rem;
+  border-radius:12px;
+  font-size:1.1rem;
+  font-weight:600;
   cursor:pointer;
 }
 
@@ -110,7 +130,7 @@ footer{
   background:#1f2933;
   color:#fff;
   text-align:center;
-  padding:20px;
+  padding:25px;
   font-size:.9rem;
 }
 
@@ -121,7 +141,7 @@ footer{
   right:20px;
   background:#25D366;
   color:#fff;
-  padding:15px 18px;
+  padding:16px 18px;
   border-radius:50%;
   text-decoration:none;
   font-size:22px;
@@ -132,8 +152,9 @@ footer{
 <body>
 
 <header>
+  <img src="logo.png" alt="Tactika Consulting">
   <h1>Compra Inteligente</h1>
-  <p>Te ayudamos a elegir mejor antes de comprar o arrendar</p>
+  <p>Te ayudamos a elegir mejor antes de comprar cualquier bien o servicio</p>
 </header>
 
 <section>
@@ -144,42 +165,44 @@ footer{
 <div class="list">
   <div class="item">🧠 Analizamos tu necesidad real</div>
   <div class="item">📊 Comparamos opciones del mercado</div>
-  <div class="item">💡 Te recomendamos la mejor decisión</div>
+  <div class="item">💡 Te recomendamos la mejor alternativa</div>
 </div>
 </div>
 
-<!-- PARA QUÉ -->
+<!-- QUÉ CUBRE -->
 <div class="box">
-<h2>¿En qué te podemos ayudar?</h2>
+<h2>¿Qué tipo de compras asesoramos?</h2>
 <div class="list">
-  <div class="item">🏠 Arriendo o compra de vivienda</div>
-  <div class="item">🚗 Compra de autos o motos</div>
-  <div class="item">📱 Tecnología y electrónica</div>
-  <div class="item">🛠️ Contratación de servicios</div>
+  <div class="item">🏠 Viviendas, arriendos y terrenos</div>
+  <div class="item">🚗 Autos, motos y transporte</div>
+  <div class="item">📱 Tecnología y electrodomésticos</div>
+  <div class="item">🛠️ Servicios, cursos y contrataciones</div>
+  <div class="item">🏥 Salud, educación y seguros</div>
+  <div class="item">🎉 Eventos, viajes y experiencias</div>
 </div>
 </div>
 
 <!-- PRECIOS -->
 <div class="box">
-<h2>Precios claros</h2>
+<h2>Precios simples y accesibles</h2>
 <div class="prices">
 
   <div class="price">
     <h3>Compra Simple</h3>
     <strong>$9.990</strong>
-    Comparación básica + recomendación
+    Compras pequeñas o cotización rápida
   </div>
 
   <div class="price">
     <h3>Compra Guiada</h3>
     <strong>$19.990</strong>
-    3 alternativas + asesoría por WhatsApp
+    3 alternativas + asesoría directa
   </div>
 
   <div class="price">
     <h3>Compra Importante</h3>
     <strong>$29.990</strong>
-    Autos, arriendos o decisiones relevantes
+    Decisiones relevantes o alto monto
   </div>
 
 </div>
@@ -188,10 +211,22 @@ footer{
 <!-- FORMULARIO -->
 <div class="box">
 <h2>Solicita tu asesoría</h2>
+
 <form action="mailto:contacto@tactikaconsulting.com" method="post">
-  <input type="text" placeholder="Nombre" required>
-  <input type="email" placeholder="Correo" required>
-  <textarea placeholder="¿Qué quieres comprar o arrendar?" rows="4" required></textarea>
+
+  <input type="text" placeholder="Nombre completo" required>
+  <input type="email" placeholder="Correo electrónico" required>
+
+  <select required>
+    <option value="">¿Qué tipo de compra es?</option>
+    <option>Bien (producto)</option>
+    <option>Servicio</option>
+    <option>Arriendo</option>
+    <option>Compra importante</option>
+  </select>
+
+  <textarea rows="4" placeholder="Cuéntanos qué quieres comprar o contratar" required></textarea>
+
   <button>Enviar solicitud</button>
 </form>
 </div>
