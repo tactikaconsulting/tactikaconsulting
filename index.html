@@ -14,7 +14,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+    background: #f4f6f8;
     color: #333;
     line-height: 1.6;
 }
@@ -29,12 +29,11 @@ header {
 
 header h1 {
     font-size: 2.6rem;
-    margin-bottom: 10px;
 }
 
 header p {
     font-size: 1.2rem;
-    opacity: 0.9;
+    margin-top: 10px;
 }
 
 /* SECCIONES */
@@ -67,14 +66,12 @@ section h2 {
 }
 
 .step span {
-    display: block;
     font-size: 2rem;
     font-weight: bold;
     color: #0f172a;
-    margin-bottom: 10px;
 }
 
-/* SERVICIOS */
+/* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -91,24 +88,43 @@ section h2 {
 
 .card h3 {
     margin-bottom: 15px;
-    color: #1e293b;
 }
 
-/* CTA */
-.cta {
-    background: #e2e8f0;
-    padding: 50px 20px;
-    text-align: center;
+/* PRECIOS */
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0f172a;
+    margin: 10px 0;
 }
 
-.cta a {
-    display: inline-block;
+/* FORMULARIO */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
     background: #0f172a;
     color: white;
-    padding: 15px 35px;
+    border: none;
     border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -120,8 +136,8 @@ footer {
     font-size: 0.9rem;
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
@@ -130,62 +146,63 @@ footer {
 </header>
 
 <section>
-    <h2>¿Qué hacemos?</h2>
-    <p style="text-align:center; max-width:800px; margin:0 auto;">
-        Buscamos, comparamos y analizamos distintas alternativas de compra o contratación
-        según lo que tú necesitas. Te entregamos cotizaciones claras para que
-        solo elijas la mejor opción.
-    </p>
-</section>
-
-<section>
     <h2>¿Cómo funciona?</h2>
     <div class="steps">
-        <div class="step">
-            <span>1</span>
-            <p>Nos dices qué producto o servicio necesitas</p>
+        <div class="step"><span>1</span><p>Nos dices qué necesitas</p></div>
+        <div class="step"><span>2</span><p>Buscamos 3 cotizaciones</p></div>
+        <div class="step"><span>3</span><p>Te enviamos opciones claras</p></div>
+        <div class="step"><span>4</span><p>Tú eliges y compras</p></div>
+    </div>
+</section>
+
+<section>
+    <h2>Precios</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Cotización Simple</h3>
+            <p class="price">$9.990</p>
+            <p>1 producto o servicio<br>3 cotizaciones</p>
         </div>
-        <div class="step">
-            <span>2</span>
-            <p>Buscamos y comparamos al menos 3 cotizaciones</p>
+
+        <div class="card">
+            <h3>Cotización Avanzada</h3>
+            <p class="price">$19.990</p>
+            <p>Comparativa detallada<br>Recomendación incluida</p>
         </div>
-        <div class="step">
-            <span>3</span>
-            <p>Te enviamos las opciones claras y ordenadas</p>
-        </div>
-        <div class="step">
-            <span>4</span>
-            <p>Tú eliges y compras con seguridad</p>
+
+        <div class="card">
+            <h3>Plan Empresa</h3>
+            <p class="price">$29.990</p>
+            <p>Hasta 5 cotizaciones<br>Soporte directo</p>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>¿Qué puedes cotizar?</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Productos</h3>
-            <p>Electrodomésticos, tecnología, muebles, insumos y más.</p>
-        </div>
-        <div class="card">
-            <h3>Servicios</h3>
-            <p>Servicios técnicos, profesionales, suscripciones, etc.</p>
-        </div>
-        <div class="card">
-            <h3>Empresas y personas</h3>
-            <p>Para clientes particulares, emprendedores y PyMEs.</p>
-        </div>
-    </div>
-</section>
+    <h2>Solicitar Cotización</h2>
 
-<section class="cta">
-    <h2>Solicita tu cotización</h2>
-    <p>Cuéntanos qué necesitas y te enviamos las mejores opciones.</p>
-    <a href="mailto:tactikaconsulting@gmail.com">Solicitar ahora</a>
+    <!-- Formulario (envía al correo por mailto, simple y funcional) -->
+    <form action="mailto:contacto@tactikaconsulting.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo" required>
+        <input type="tel" name="telefono" placeholder="Teléfono">
+        
+        <select name="plan">
+            <option value="">Tipo de cotización</option>
+            <option>Cotización Simple</option>
+            <option>Cotización Avanzada</option>
+            <option>Plan Empresa</option>
+        </select>
+
+        <textarea name="detalle" rows="4" placeholder="¿Qué necesitas cotizar?" required></textarea>
+
+        <button type="submit">Enviar Solicitud</button>
+    </form>
 </section>
 
 <footer>
-    © 2026 Táctika · Servicio de Cotizaciones Inteligentes
+    <p>📧 contacto@tactikaconsulting.com | 📱 +56 9 6429 5330</p>
+    <p>© 2026 Táctika · Cotizaciones Inteligentes</p>
 </footer>
 
 </body>
