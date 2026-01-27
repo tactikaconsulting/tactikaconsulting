@@ -1,336 +1,73 @@
-// ============================================
-// FUNCIONALIDADES INTERACTIVAS
-// ============================================
-
-// Datos simulados para demostración
-const clientData = {
-    totalSavings: 2895000, // CLP
-    totalClients: 247,
-    averageSavingsPerClient: 11720
-};
-
-// Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
-    initializeCounters();
-    handleFormSubmission();
-    smoothScroll();
-});
-
-// ============================================
-// CONTADORES ANIMADOS
-// ============================================
-
-function initializeCounters() {
-    animateCounter('totalSavings', clientData.totalSavings, '$', 'CLP');
-    animateCounter('totalClients', clientData.totalClients, '', '+');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-function animateCounter(elementId, finalValue, prefix = '', suffix = '') {
-    const element = document.getElementById(elementId);
-    if (!element) return;
-
-    const duration = 2000; // 2 segundos
-    const startTime = Date.now();
-    const startValue = 0;
-
-    function update() {
-        const elapsed = Date.now() - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Easing function (ease-out-quad)
-        const easeProgress = 1 - Math.pow(1 - progress, 2);
-        
-        const currentValue = Math.floor(startValue + (finalValue - startValue) * easeProgress);
-        
-        if (prefix === '$') {
-            element.textContent = prefix + currentValue.toLocaleString('es-CL') + ' ' + suffix;
-        } else {
-            element.textContent = prefix + currentValue.toLocaleString('es-CL') + suffix;
-        }
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        }
-    }
-
-    update();
+body {
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
 }
 
-// ============================================
-// MANEJO DEL FORMULARIO
-// ============================================
-
-function handleFormSubmission() {
-    const form = document.getElementById('cotizacionForm');
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Obtener datos del formulario
-        const nombre = document.getElementById('nombre').value;
-        const whatsapp = document.getElementById('whatsapp').value;
-        const correo = document.getElementById('correo').value;
-        const tipo = document.getElementById('tipo').value;
-        const detalle = document.getElementById('detalle').value;
-        const presupuesto = document.getElementById('presupuesto').value;
-        const referido = document.getElementById('referido').value;
-
-        // Validar datos
-        if (!nombre || !whatsapp || !correo || !tipo || !detalle) {
-            alert('Por favor, completa todos los campos requeridos.');
-            return;
-        }
-
-        // Construir mensaje de WhatsApp
-        const mensaje = construirMensajeWhatsApp({
-            nombre,
-            correo,
-            tipo,
-            detalle,
-            presupuesto,
-            referido
-        });
-
-        // Limpiar número de WhatsApp (remover espacios y caracteres especiales)
-        const whatsappLimpio = whatsapp.replace(/\D/g, '');
-        
-        // Crear URL de WhatsApp
-        const urlWhatsApp = `https://wa.me/${whatsappLimpio}?text=${encodeURIComponent(mensaje)}`;
-
-        // Abrir WhatsApp
-        window.open(urlWhatsApp, '_blank');
-
-        // Mostrar mensaje de confirmación
-        mostrarConfirmacion();
-
-        // Limpiar formulario
-        form.reset();
-    });
+/* Header */
+.header {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-function construirMensajeWhatsApp(datos) {
-    let mensaje = `¡Hola! Soy ${datos.nombre}\n\n`;
-    mensaje += `📋 *Solicitud de Cotización*\n`;
-    mensaje += `━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
-    mensaje += `*Tipo de Cotización:* ${datos.tipo}\n`;
-    mensaje += `*Descripción:* ${datos.detalle}\n`;
-    
-    if (datos.presupuesto) {
-        mensaje += `*Presupuesto Estimado:* $${parseInt(datos.presupuesto).toLocaleString('es-CL')} CLP\n`;
-    }
-    
-    if (datos.referido) {
-        mensaje += `*¿Cómo nos conociste?:* ${datos.referido}\n`;
-    }
-    
-    mensaje += `\n*Correo:* ${datos.correo}\n`;
-    mensaje += `━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-    mensaje += `\nEspero tu respuesta pronto. ¡Gracias!`;
-    
-    return mensaje;
+.header h1 {
+    font-size: 2.5rem;
 }
 
-function mostrarConfirmacion() {
-    // Crear elemento de confirmación
-    const confirmacion = document.createElement('div');
-    confirmacion.className = 'confirmacion-toast';
-    confirmacion.innerHTML = `
-        <div class="confirmacion-contenido">
-            <span class="confirmacion-icon">✅</span>
-            <div>
-                <h4>¡Solicitud enviada!</h4>
-                <p>Nos pondremos en contacto por WhatsApp en breve.</p>
-            </div>
-        </div>
-    `;
-    
-    // Agregar estilos CSS dinámicamente
-    const style = document.createElement('style');
-    style.textContent = `
-        .confirmacion-toast {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            animation: slideIn 0.3s ease-out;
-            max-width: 300px;
-        }
-
-        .confirmacion-contenido {
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-
-        .confirmacion-icon {
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .confirmacion-toast h4 {
-            margin-bottom: 0.3rem;
-            color: white;
-        }
-
-        .confirmacion-toast p {
-            margin-bottom: 0;
-            font-size: 0.9rem;
-            opacity: 0.95;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(400px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideOut {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(400px);
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .confirmacion-toast {
-                bottom: 10px;
-                right: 10px;
-                left: 10px;
-                max-width: none;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Agregar al DOM
-    document.body.appendChild(confirmacion);
-    
-    // Remover después de 4 segundos
-    setTimeout(() => {
-        confirmacion.style.animation = 'slideOut 0.3s ease-out';
-        setTimeout(() => confirmacion.remove(), 300);
-    }, 4000);
+.header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
 }
 
-// ============================================
-// SCROLL SUAVE
-// ============================================
-
-function smoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            
-            e.preventDefault();
-            const target = document.querySelector(href);
-            
-            if (target) {
-                const offsetTop = target.offsetTop - 80; // Restar altura del navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+/* Contenedor general */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-// ============================================
-// EFECTOS DE SCROLL
-// ============================================
-
-function handleScrollEffects() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observar elementos con clase 'fade-in'
-    document.querySelectorAll('.step, .testimonio-card, .plan-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
+/* Servicios */
+.services {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-// Inicializar efectos de scroll
-window.addEventListener('load', handleScrollEffects);
-
-// ============================================
-// VALIDACIÓN DE WHATSAPP
-// ============================================
-
-function validarWhatsApp(numero) {
-    // Remover espacios y caracteres especiales
-    const limpio = numero.replace(/\D/g, '');
-    
-    // Validar que sea un número de teléfono válido (mínimo 9 dígitos)
-    return limpio.length >= 9;
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-// Agregar validación en tiempo real
-const inputWhatsApp = document.getElementById('whatsapp');
-if (inputWhatsApp) {
-    inputWhatsApp.addEventListener('blur', function() {
-        if (this.value && !validarWhatsApp(this.value)) {
-            this.style.borderColor = '#ff6b6b';
-            this.title = 'Por favor, ingresa un número de teléfono válido';
-        } else {
-            this.style.borderColor = '';
-            this.title = '';
-        }
-    });
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-// ============================================
-// ANALYTICS Y TRACKING
-// ============================================
-
-function trackEvent(eventName, eventData = {}) {
-    // Esta función puede ser expandida para integrar con Google Analytics, Mixpanel, etc.
-    console.log(`Event: ${eventName}`, eventData);
+/* Contacto */
+.contact {
+    background: #e2e8f0;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-// Rastrear clics en botones principales
-document.querySelectorAll('.btn-primary').forEach(btn => {
-    btn.addEventListener('click', function() {
-        trackEvent('button_click', {
-            buttonText: this.textContent,
-            buttonClass: this.className
-        });
-    });
-});
-
-// Rastrear envíos de formulario
-document.getElementById('cotizacionForm')?.addEventListener('submit', function() {
-    trackEvent('form_submit', {
-        formId: this.id
-    });
-});
-
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
