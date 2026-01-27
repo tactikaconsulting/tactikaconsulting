@@ -1,310 +1,82 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra Inteligente | Tactika Consulting</title>
-    <meta name="description" content="Obtén 3 cotizaciones reales y compara precios sin perder tiempo ni pagar de más. Asesoría inteligente en compras.">
+    <meta name="description" content="Obtén 3 cotizaciones reales y compara precios sin perder tiempo ni pagar de más.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-brand">
-                <h1>🎯 Compra Inteligente</h1>
-                <p class="tagline">Nosotros cotizamos, tú eliges y compras</p>
+
+<nav class="navbar">
+    <div class="container">
+        <div>
+            <h1>🎯 Compra Inteligente</h1>
+            <p>Nosotros cotizamos, tú eliges y compras</p>
+        </div>
+        <a href="https://wa.me/56964295330" class="btn">WhatsApp</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h2>¿Necesitas cotizar un producto o servicio?</h2>
+        <p>Buscamos <strong>3 cotizaciones reales</strong> para que ahorres tiempo y dinero.</p>
+        <a href="#formulario" class="btn btn-primary">Solicitar Cotización</a>
+
+        <div class="stats">
+            <div class="stat">
+                <span id="totalSavings">$0</span>
+                <small>Ahorrado</small>
             </div>
-            <div class="navbar-contact">
-                <a href="https://wa.me/56964295330" class="btn-whatsapp-small" target="_blank">💬 WhatsApp</a>
+            <div class="stat">
+                <span id="totalClients">0+</span>
+                <small>Clientes</small>
+            </div>
+            <div class="stat">
+                <span>3</span>
+                <small>Cotizaciones</small>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>¿Necesitas cotizar cualquier bien o servicio?</h2>
-                <p class="hero-subtitle">Buscamos <strong>3 cotizaciones reales</strong> para que tomes la mejor decisión sin perder tiempo ni pagar de más.</p>
-                <a href="#formulario" class="btn btn-primary btn-large">📲 Solicitar Cotización</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-number" id="totalSavings">$0</div>
-                    <div class="stat-label">Ahorrado por nuestros clientes</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="totalClients">0+</div>
-                    <div class="stat-label">Clientes satisfechos</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Cotizaciones garantizadas</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="como-funciona">
+    <div class="container steps">
+        <div class="step">📝 Cuéntanos qué necesitas</div>
+        <div class="step">🔍 Buscamos opciones</div>
+        <div class="step">📊 Comparamos</div>
+        <div class="step">✅ Tú decides</div>
+    </div>
+</section>
 
-    <!-- Cómo Funciona -->
-    <section class="como-funciona">
-        <div class="container">
-            <h2>¿Cómo funciona?</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-icon">📝</div>
-                    <h3>Cuéntanos</h3>
-                    <p>Nos describes qué necesitas cotizar</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">🔍</div>
-                    <h3>Buscamos</h3>
-                    <p>Encontramos 3 cotizaciones reales</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">📊</div>
-                    <h3>Comparamos</h3>
-                    <p>Te enviamos las opciones por WhatsApp</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon">✅</div>
-                    <h3>Compras</h3>
-                    <p>Tú eliges y compras tranquilo</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="formulario" class="formulario-section">
+    <div class="container">
+        <h2>Solicita tu cotización</h2>
 
-    <!-- Casos de Éxito -->
-    <section class="testimonios">
-        <div class="container">
-            <h2>¿Por Qué Elegirnos?</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">⚡</div>
-                    <h3>Rápido</h3>
-                    <p>Obtienes 3 cotizaciones reales en 24-48 horas, sin esperar semanas.</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">💰</div>
-                    <h3>Ahorro Garantizado</h3>
-                    <p>Comparar opciones reales te permite ahorrar entre 15% a 40% en tus compras.</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">🔒</div>
-                    <h3>Seguro</h3>
-                    <p>Verificamos que cada proveedor sea confiable y pueda cumplir con lo ofrecido.</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">👥</div>
-                    <h3>Confiable</h3>
-                    <p>Más de 200 clientes ya han utilizado nuestro servicio con éxito.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <form id="cotizacionForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="whatsapp" placeholder="WhatsApp" required>
+            <input type="email" id="correo" placeholder="Correo" required>
 
-    <!-- Planes y Precios -->
-    <section class="planes">
-        <div class="container">
-            <h2>Planes y Precios</h2>
-            <p class="planes-subtitle">Elige el plan que mejor se adapte a lo que necesitas</p>
-            <div class="planes-grid">
-                <div class="plan-card">
-                    <h3>Plan Básico</h3>
-                    <p class="plan-desc">Perfecto para empezar</p>
-                    <div class="plan-features">
-                        <p>✓ 1 bien o servicio</p>
-                        <p>✓ 3 cotizaciones reales</p>
-                        <p>✓ Entrega en 48 horas</p>
-                    </div>
-                    <div class="plan-price">$9.990 CLP</div>
-                    <div class="plan-buttons">
-                        <a href="https://mpago.la/27Nxe1T" class="btn btn-primary" target="_blank">💳 Pagar con Mercado Pago</a>
-                        <a href="#formulario" class="btn btn-outline">📋 Cotizar por WhatsApp</a>
-                    </div>
-                </div>
+            <select id="tipo" required>
+                <option value="">¿Qué necesitas?</option>
+                <option value="Producto">Producto</option>
+                <option value="Servicio">Servicio</option>
+            </select>
 
-                <div class="plan-card plan-destacado">
-                    <div class="plan-badge">Más Popular</div>
-                    <h3>Plan Estándar</h3>
-                    <p class="plan-desc">La mejor opción</p>
-                    <div class="plan-features">
-                        <p>✓ Hasta 3 bienes o servicios</p>
-                        <p>✓ Comparación completa</p>
-                        <p>✓ Entrega en 36 horas</p>
-                        <p>✓ Asesoría básica</p>
-                    </div>
-                    <div class="plan-price">$19.990 CLP</div>
-                    <div class="plan-buttons">
-                        <a href="https://mpago.la/27VNeRU" class="btn btn-primary" target="_blank">💳 Pagar con Mercado Pago</a>
-                        <a href="#formulario" class="btn btn-outline">📋 Cotizar por WhatsApp</a>
-                    </div>
-                </div>
+            <textarea id="detalle" placeholder="Describe lo que necesitas" required></textarea>
 
-                <div class="plan-card">
-                    <h3>Plan Premium</h3>
-                    <p class="plan-desc">Para casos complejos</p>
-                    <div class="plan-features">
-                        <p>✓ Cotización compleja o especial</p>
-                        <p>✓ Acompañamiento personalizado</p>
-                        <p>✓ Entrega en 24 horas</p>
-                        <p>✓ Seguimiento post-compra</p>
-                    </div>
-                    <div class="plan-price">$29.990 CLP</div>
-                    <div class="plan-buttons">
-                        <a href="https://mpago.la/1QiddBU" class="btn btn-primary" target="_blank">💳 Pagar con Mercado Pago</a>
-                        <a href="#formulario" class="btn btn-outline">📋 Cotizar por WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+        </form>
+    </div>
+</section>
 
-    <!-- Programa de Fidelización -->
-    <section class="fidelizacion">
-        <div class="container">
-            <h2>Programa de Fidelización</h2>
-            <p class="fidelizacion-subtitle">Cuanto más compres inteligente, más beneficios recibes</p>
-            <div class="fidelizacion-grid">
-                <div class="fidelizacion-card">
-                    <div class="fidelizacion-icon">🎁</div>
-                    <h3>Programa de Referidos</h3>
-                    <p>Recomienda a un amigo y obtén <strong>tu próxima cotización gratis</strong>. Sin límite de referidos.</p>
-                </div>
-                <div class="fidelizacion-card">
-                    <div class="fidelizacion-icon">📊</div>
-                    <h3>Reporte de Ahorro Anual</h3>
-                    <p>Recibe un resumen personalizado de cuánto dinero ahorraste en el año gracias a Tactika.</p>
-                </div>
-                <div class="fidelizacion-card">
-                    <div class="fidelizacion-icon">⚡</div>
-                    <h3>Acceso Prioritario</h3>
-                    <p>Clientes recurrentes reciben sus cotizaciones en la mitad del tiempo estándar.</p>
-                </div>
-                <div class="fidelizacion-card">
-                    <div class="fidelizacion-icon">📚</div>
-                    <h3>Contenido Exclusivo</h3>
-                    <p>Acceso a guías de compra, análisis de mercado y alertas de ofertas estacionales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="footer">
+    <p>© 2026 Compra Inteligente - Tactika Consulting</p>
+</footer>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Preguntas Frecuentes</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>¿Cuánto tiempo tarda en llegar mi cotización?</h4>
-                    <p>Depende del plan: Plan Básico (48h), Plan Estándar (36h), Plan Premium (24h). Cotizaciones urgentes pueden ser más rápidas.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>¿Qué pasa si no me gusta ninguna cotización?</h4>
-                    <p>Si ninguna de las 3 opciones te satisface, podemos buscar alternativas adicionales. Tu satisfacción es nuestra prioridad.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>¿Puedo cotizar servicios o solo productos?</h4>
-                    <p>¡Ambos! Cotizamos bienes y servicios: desde equipos hasta servicios de consultoría, reparación, diseño y más.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>¿Hay garantía en las cotizaciones?</h4>
-                    <p>Las cotizaciones son reales y válidas. Nosotros verificamos que cada proveedor pueda cumplir con lo ofrecido.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>¿Cómo funciona el programa de referidos?</h4>
-                    <p>Comparte tu código de referido con amigos. Cuando contraten un servicio, ambos reciben beneficios.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>¿Es seguro compartir mis datos?</h4>
-                    <p>Sí. Tus datos se usan solo para buscar cotizaciones. No los compartimos con terceros sin tu consentimiento.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Formulario -->
-    <section class="formulario-section" id="formulario">
-        <div class="container">
-            <h2>Solicita tu Cotización</h2>
-            <form class="formulario" id="cotizacionForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre *</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="whatsapp">WhatsApp *</label>
-                    <input type="text" id="whatsapp" name="whatsapp" placeholder="+56 9 XXXX XXXX" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="correo">Correo Electrónico *</label>
-                    <input type="email" id="correo" name="correo" placeholder="tu@email.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="tipo">¿Qué necesitas cotizar? *</label>
-                    <select id="tipo" name="tipo" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="bien">Bien (producto)</option>
-                        <option value="servicio">Servicio</option>
-                        <option value="ambos">Ambos</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="detalle">Describe lo que necesitas *</label>
-                    <textarea id="detalle" name="detalle" placeholder="Cuéntanos con detalle qué necesitas cotizar..." rows="5" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="presupuesto">Presupuesto Estimado (opcional)</label>
-                    <input type="number" id="presupuesto" name="presupuesto" placeholder="Ej: 500000">
-                </div>
-
-                <div class="form-group">
-                    <label for="referido">¿Cómo nos conociste? (opcional)</label>
-                    <select id="referido" name="referido">
-                        <option value="">Selecciona una opción</option>
-                        <option value="referido">Referido de un amigo</option>
-                        <option value="google">Google</option>
-                        <option value="redes">Redes sociales</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-large">📲 Enviar por WhatsApp</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Compra Inteligente</h4>
-                    <p>Nosotros cotizamos, tú eliges y compras.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>📧 <a href="mailto:contacto@tactikaconsulting.com">contacto@tactikaconsulting.com</a></p>
-                    <p>📱 <a href="https://wa.me/56964295330" target="_blank">WhatsApp: +56 9 6429 5330</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Síguenos</h4>
-                    <p><a href="#" target="_blank">Facebook</a> | <a href="#" target="_blank">Instagram</a> | <a href="#" target="_blank">LinkedIn</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Compra Inteligente. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
