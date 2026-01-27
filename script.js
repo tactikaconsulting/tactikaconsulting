@@ -1,49 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Animaciones
-  const pasos = document.querySelectorAll('.paso');
-  pasos.forEach(paso => {
-    paso.style.opacity = '0';
-    paso.style.transform = 'translateY(30px)';
-    paso.style.transition = 'all 0.6s ease';
-  });
+    // DATOS SIMULADOS
+    const data = {
+        totalSavings: 2895000,
+        totalClients: 247
+    };
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
+    animateCounter('totalSavings', data.totalSavings, '$');
+    animateCounter('totalClients', data.totalClients, '');
+
+    // FORMULARIO
+    const form = document.getElementById('cotizacionForm');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const nombre = nombreInput().value;
+        const whatsapp = whatsappInput().value.replace(/\D/g, '');
+        const correo = correoInput().value;
+        const tipo = tipoInput().value;
+        const detalle = detalleInput().value;
+
+        const mensaje =
+`Hola, quiero una cotización:
+
+👤 Nombre: ${nombre}
+📧 Correo: ${correo}
+📦 Tipo: ${tipo}
+📝 Detalle: ${detalle}`;
+
+        window.open(`https://wa.me/56964295330?text=${encodeURIComponent(mensaje)}`, '_blank');
+        form.reset();
     });
-  });
 
-  pasos.forEach(paso => observer.observe(paso));
+    // FUNCIONES
+    function animateCounter(id, value, prefix) {
+        const el = document.getElementById(id);
+        let start = 0;
+        const duration = 1500;
+        const step = value / (duration / 16);
 
-  // FORMULARIO WHATSAPP
-  const form = document.getElementById('form-whatsapp');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const nombre = document.getElementById('nombre').value;
-    const whatsapp = document.getElementById('whatsapp').value;
-    const correo = document.getElementById('correo').value;
-    const tipo = document.getElementById('tipo').value;
-    const detalle = document.getElementById('detalle').value;
-    const presupuesto = document.getElementById('presupuesto').value;
-
-    let mensaje = `Hola, quiero una cotización con Compra Inteligente:%0A%0A`;
-    mensaje += `👤 Nombre: ${nombre}%0A`;
-    mensaje += `📲 WhatsApp: ${whatsapp}%0A`;
-    mensaje += `📧 Correo: ${correo}%0A`;
-    mensaje += `📦 Tipo: ${tipo}%0A`;
-    mensaje += `📝 Detalle: ${detalle}%0A`;
-    if (presupuesto) {
-      mensaje += `💰 Presupuesto: $${presupuesto}%0A`;
+        const interval = setInterval(() => {
+            start += step;
+            if (start >= value) {
+                start = value;
+                clearInterval(interval);
+            }
+            el.textContent = prefix + Math.floor(start).toLocaleString('es-CL');
+        }, 16);
     }
 
-    const url = `https://wa.me/56964295330?text=${mensaje}`;
-    window.open(url, '_blank');
-  });
+    function nombreInput(){ return document.getElementById('nombre'); }
+    function whatsappInput(){ return document.getElementById('whatsapp'); }
+    function correoInput(){ return document.getElementById('correo'); }
+    function tipoInput(){ return document.getElementById('tipo'); }
+    function detalleInput(){ return document.getElementById('detalle'); }
 
 });
