@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Táctika Consulting</title>
+<title>Táctika – Cotizaciones Inteligentes</title>
 
 <style>
 * {
@@ -28,7 +28,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     margin-bottom: 10px;
 }
 
@@ -46,12 +46,35 @@ section {
 
 section h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 2rem;
     color: #0f172a;
 }
 
-/* CARDS */
+/* PASOS */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.step {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.step span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+/* SERVICIOS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -71,10 +94,6 @@ section h2 {
     color: #1e293b;
 }
 
-.card p {
-    font-size: 0.95rem;
-}
-
 /* CTA */
 .cta {
     background: #e2e8f0;
@@ -82,19 +101,11 @@ section h2 {
     text-align: center;
 }
 
-.cta h2 {
-    margin-bottom: 15px;
-}
-
-.cta p {
-    margin-bottom: 25px;
-}
-
 .cta a {
     display: inline-block;
     background: #0f172a;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 35px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -106,7 +117,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
     font-size: 0.9rem;
 }
 </style>
@@ -115,48 +125,67 @@ footer {
 <body>
 
 <header>
-    <h1>Táctika Consulting</h1>
-    <p>Asesoría administrativa, financiera y comercial para PyMEs</p>
+    <h1>Táctika</h1>
+    <p>Cotizaciones inteligentes · Tú eliges, nosotros comparamos</p>
 </header>
 
 <section>
-    <h2>¿Quiénes somos?</h2>
+    <h2>¿Qué hacemos?</h2>
     <p style="text-align:center; max-width:800px; margin:0 auto;">
-        En Táctika Consulting ayudamos a emprendedores y pequeñas empresas
-        a ordenar su gestión, mejorar sus finanzas y tomar mejores decisiones
-        con información clara y accionable.
+        Buscamos, comparamos y analizamos distintas alternativas de compra o contratación
+        según lo que tú necesitas. Te entregamos cotizaciones claras para que
+        solo elijas la mejor opción.
     </p>
 </section>
 
 <section>
-    <h2>Nuestros Servicios</h2>
+    <h2>¿Cómo funciona?</h2>
+    <div class="steps">
+        <div class="step">
+            <span>1</span>
+            <p>Nos dices qué producto o servicio necesitas</p>
+        </div>
+        <div class="step">
+            <span>2</span>
+            <p>Buscamos y comparamos al menos 3 cotizaciones</p>
+        </div>
+        <div class="step">
+            <span>3</span>
+            <p>Te enviamos las opciones claras y ordenadas</p>
+        </div>
+        <div class="step">
+            <span>4</span>
+            <p>Tú eliges y compras con seguridad</p>
+        </div>
+    </div>
+</section>
 
+<section>
+    <h2>¿Qué puedes cotizar?</h2>
     <div class="cards">
         <div class="card">
-            <h3>Diagnóstico Financiero</h3>
-            <p>Análisis de ingresos, costos, márgenes y flujo de caja para entender la realidad del negocio.</p>
+            <h3>Productos</h3>
+            <p>Electrodomésticos, tecnología, muebles, insumos y más.</p>
         </div>
-
         <div class="card">
-            <h3>Gestión Administrativa</h3>
-            <p>Orden de procesos, control interno y reportes simples para una mejor gestión.</p>
+            <h3>Servicios</h3>
+            <p>Servicios técnicos, profesionales, suscripciones, etc.</p>
         </div>
-
         <div class="card">
-            <h3>Apoyo Comercial</h3>
-            <p>Estrategias de precios, ventas y crecimiento adaptadas a cada PyME.</p>
+            <h3>Empresas y personas</h3>
+            <p>Para clientes particulares, emprendedores y PyMEs.</p>
         </div>
     </div>
 </section>
 
 <section class="cta">
-    <h2>¿Hablamos?</h2>
-    <p>Agenda una asesoría y ordena tu negocio con una estrategia clara.</p>
-    <a href="mailto:tactikaconsulting@gmail.com">Contactar</a>
+    <h2>Solicita tu cotización</h2>
+    <p>Cuéntanos qué necesitas y te enviamos las mejores opciones.</p>
+    <a href="mailto:tactikaconsulting@gmail.com">Solicitar ahora</a>
 </section>
 
 <footer>
-    © 2026 Táctika Consulting · Consultoría para PyMEs
+    © 2026 Táctika · Servicio de Cotizaciones Inteligentes
 </footer>
 
 </body>
