@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TUUSUARIO.github.io/TUREPO/sitemap.xml
+Sitemap: https://www.tactikaconsulting.com/sitemap.xml
