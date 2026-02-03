@@ -2,146 +2,259 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Cotizaciones Inteligentes en Chile | Táctika Consulting</title>
-
-  <meta name="description" content="Buscamos 3 cotizaciones reales por ti en menos de 48 horas. Ahorra tiempo y dinero. Servicio en todo Chile.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://www.tactikaconsulting.com/">
+  <title>Táctika Consulting | Compra Inteligente</title>
+  <meta name="description" content="Te ayudamos a comprar o arrendar de forma inteligente. Comparamos, cotizamos y tú decides.">
 
   <style>
-    body { font-family: Arial, sans-serif; margin:0; color:#222; }
-    section { padding:60px 20px; text-align:center; }
-    h1 { font-size:2.4rem; }
-    h1 span { color:#0ea5e9; }
-    h2 { margin-bottom:20px; }
-    p { max-width:700px; margin:auto; }
-
-    .hero p { font-size:1.1rem; margin:20px auto; }
-
-    .btn-primary {
-      background:#0ea5e9;
-      color:#fff;
-      padding:14px 22px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-      display:inline-block;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .btn-secondary {
-      border:2px solid #0ea5e9;
-      padding:14px 22px;
-      border-radius:8px;
-      text-decoration:none;
-      color:#0ea5e9;
-      display:inline-block;
+    body {
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
     }
 
-    .hero-cta {
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      flex-wrap:wrap;
-      margin-top:25px;
+    header {
+      background: #0b2a4a;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
     }
 
-    .hero-trust span {
-      margin:0 10px;
-      font-size:0.9rem;
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
-    /* GRID GENERAL */
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:25px;
-      max-width:1000px;
-      margin:40px auto 0;
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0b2a4a;
+    }
+
+    /* SERVICIOS */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0b2a4a;
     }
 
     /* PRECIOS */
-    .precios { background:#f9fafb; }
-
-    .plan {
-      background:#fff;
-      border:1px solid #ddd;
-      border-radius:14px;
-      padding:30px 20px;
-      display:flex;
-      flex-direction:column;
-      min-height:340px;
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
-    .plan h3 { margin-bottom:10px; }
-
-    .plan-precio {
-      font-size:2.2rem;
-      font-weight:700;
-      color:#0ea5e9;
-      margin:15px 0;
+    .price-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      border-top: 6px solid #0b2a4a;
     }
 
-    .plan p { flex-grow:1; }
+    .price-card h3 {
+      margin-bottom: 15px;
+      color: #0b2a4a;
+    }
 
-    .plan-destacado {
-      border:2px solid #0ea5e9;
-      transform:scale(1.03);
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #111;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .price-card ul li {
+      margin: 8px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0b2a4a;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #14406d;
     }
 
     /* FORMULARIO */
-    .formulario {
-      max-width:600px;
-      margin:40px auto 0;
-      text-align:left;
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
     }
 
-    .formulario input,
-    .formulario textarea,
-    .formulario select {
-      width:100%;
-      padding:12px;
-      margin-bottom:15px;
-      border-radius:8px;
-      border:1px solid #ccc;
-      font-size:1rem;
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
     }
 
-    .formulario button {
-      width:100%;
-      border:none;
-      cursor:pointer;
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
     }
 
-    /* WHATSAPP */
-    .whatsapp {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25d366;
-      color:#fff;
-      font-size:28px;
-      padding:14px 16px;
-      border-radius:50%;
-      text-decoration:none;
-      z-index:999;
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    footer {
+      background: #0b2a4a;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Ahorra hasta un <span>40%</span> sin perder tiempo</h1>
-  <p>En <strong>Táctika Consulting</strong> buscamos <strong>3 cotizaciones reales</strong> por ti en menos de <strong>48 horas</strong>. Tú eliges y compras tranquilo.</p>
+<header>
+  <h1>Táctika Consulting</h1>
+  <p>Compra y arriendo inteligente · Nosotros cotizamos, tú decides</p>
+</header>
 
-  <div class="hero-cta">
-    <a href="#formulario" class="btn-primary">Cotizar ahora</a>
-    <a href="#precios" class="btn-secondary">Ver precios</a>
+<section>
+  <h2>¿Cómo funciona?</h2>
+  <div class="services">
+    <div class="card">
+      <h3>1️⃣ Nos dices qué necesitas</h3>
+      <p>Producto, servicio, compra o arriendo.</p>
+    </div>
+    <div class="card">
+      <h3>2️⃣ Buscamos y comparamos</h3>
+      <p>Analizamos precio, calidad y condiciones.</p>
+    </div>
+    <div class="card">
+      <h3>3️⃣ Tú eliges tranquilo</h3>
+      <p>Te entregamos opciones claras y reales.</p>
+    </div>
   </div>
+</section>
 
-  <div class="hero-trust">
-    <span>✔️ Cotizaciones reales</span>
-    <span>✔️ Proveedores verificados</span>
-    <s
+<section>
+  <h2>Planes y precios</h2>
+  <div class="pricing">
 
+    <div class="price-card">
+      <h3>Básico</h3>
+      <div class="price">$9.990</div>
+      <ul>
+        <li>1 cotización</li>
+        <li>Comparación simple</li>
+        <li>Respuesta rápida</li>
+      </ul>
+      <a class="btn" href="https://mpago.la/27Nxe1T" target="_blank">Pagar</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Estándar</h3>
+      <div class="price">$19.990</div>
+      <ul>
+        <li>2–3 cotizaciones</li>
+        <li>Análisis comparativo</li>
+        <li>Recomendación</li>
+      </ul>
+      <a class="btn" href="https://mpago.la/27VNeRU" target="_blank">Pagar</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Premium</h3>
+      <div class="price">$29.990</div>
+      <ul>
+        <li>Cotización completa</li>
+        <li>Análisis profesional</li>
+        <li>Acompañamiento</li>
+      </ul>
+      <a class="btn" href="https://mpago.la/1QiddBU" target="_blank">Pagar</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Solicita tu cotización</h2>
+
+  <!-- FORMULARIO (puedes conectar a Google Forms o Formspree) -->
+  <form action="https://formspree.io/f/xbldnqzd" method="POST">
+    <label>Nombre</label>
+    <input type="text" name="nombre" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>¿Qué necesitas cotizar?</label>
+    <textarea name="mensaje" required></textarea>
+
+    <br><br>
+    <button class="btn" type="submit">Enviar solicitud</button>
+  </form>
+</section>
+
+<footer>
+  <p>
+    © 2026 Táctika Consulting ·  
+    <a href="mailto:contacto@tactikaconsulting.com">contacto@tactikaconsulting.com</a> ·  
+    WhatsApp +56 9 6429 5330
+  </p>
+</footer>
+
+</body>
+</html>
