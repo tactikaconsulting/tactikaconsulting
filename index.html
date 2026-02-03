@@ -2,27 +2,21 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-
   <title>Cotizaciones Inteligentes en Chile | Táctika Consulting</title>
 
-  <meta name="description" content="En Táctika Consulting buscamos 3 cotizaciones reales por ti en menos de 48 horas. Ahorra tiempo y dinero en tus compras. Servicio en todo Chile.">
-  <meta name="keywords" content="cotizaciones chile, comparar precios, cotizar servicios, cotizar productos, ahorro compras">
+  <meta name="description" content="Buscamos 3 cotizaciones reales por ti en menos de 48 horas. Ahorra tiempo y dinero. Servicio en todo Chile.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Canonical -->
   <link rel="canonical" href="https://www.tactikaconsulting.com/">
 
   <style>
     body { font-family: Arial, sans-serif; margin:0; color:#222; }
     section { padding:60px 20px; text-align:center; }
-    h1 { font-size:2.5rem; }
+    h1 { font-size:2.4rem; }
     h1 span { color:#0ea5e9; }
     h2 { margin-bottom:20px; }
     p { max-width:700px; margin:auto; }
 
     .hero p { font-size:1.1rem; margin:20px auto; }
-
-    .hero-cta { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:25px; }
 
     .btn-primary {
       background:#0ea5e9;
@@ -31,6 +25,7 @@
       border-radius:8px;
       text-decoration:none;
       font-weight:600;
+      display:inline-block;
     }
 
     .btn-secondary {
@@ -39,34 +34,85 @@
       border-radius:8px;
       text-decoration:none;
       color:#0ea5e9;
+      display:inline-block;
     }
 
-    .hero-trust span { margin:0 10px; font-size:0.9rem; }
+    .hero-cta {
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      flex-wrap:wrap;
+      margin-top:25px;
+    }
 
+    .hero-trust span {
+      margin:0 10px;
+      font-size:0.9rem;
+    }
+
+    /* GRID GENERAL */
     .grid {
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:25px;
       max-width:1000px;
-      margin:auto;
+      margin:40px auto 0;
     }
 
-    .box {
+    /* PRECIOS */
+    .precios { background:#f9fafb; }
+
+    .plan {
+      background:#fff;
       border:1px solid #ddd;
-      padding:25px;
-      border-radius:12px;
+      border-radius:14px;
+      padding:30px 20px;
+      display:flex;
+      flex-direction:column;
+      min-height:340px;
     }
 
-    .destacado {
+    .plan h3 { margin-bottom:10px; }
+
+    .plan-precio {
+      font-size:2.2rem;
+      font-weight:700;
+      color:#0ea5e9;
+      margin:15px 0;
+    }
+
+    .plan p { flex-grow:1; }
+
+    .plan-destacado {
       border:2px solid #0ea5e9;
+      transform:scale(1.03);
     }
 
-    .precio {
-      font-size:1.9rem;
-      font-weight:bold;
-      margin:10px 0;
+    /* FORMULARIO */
+    .formulario {
+      max-width:600px;
+      margin:40px auto 0;
+      text-align:left;
     }
 
+    .formulario input,
+    .formulario textarea,
+    .formulario select {
+      width:100%;
+      padding:12px;
+      margin-bottom:15px;
+      border-radius:8px;
+      border:1px solid #ccc;
+      font-size:1rem;
+    }
+
+    .formulario button {
+      width:100%;
+      border:none;
+      cursor:pointer;
+    }
+
+    /* WHATSAPP */
     .whatsapp {
       position:fixed;
       bottom:20px;
@@ -87,79 +133,15 @@
 <!-- HERO -->
 <section class="hero">
   <h1>Ahorra hasta un <span>40%</span> sin perder tiempo</h1>
-  <p>
-    En <strong>Táctika Consulting</strong> buscamos <strong>3 cotizaciones reales</strong> por ti en menos de
-    <strong>48 horas</strong>. Tú eliges y compras tranquilo.
-  </p>
+  <p>En <strong>Táctika Consulting</strong> buscamos <strong>3 cotizaciones reales</strong> por ti en menos de <strong>48 horas</strong>. Tú eliges y compras tranquilo.</p>
 
   <div class="hero-cta">
-    <a href="https://wa.me/56964295330?text=Hola%20quiero%20cotizar%20un%20producto%20o%20servicio" class="btn-primary">
-      Cotizar por WhatsApp
-    </a>
+    <a href="#formulario" class="btn-primary">Cotizar ahora</a>
     <a href="#precios" class="btn-secondary">Ver precios</a>
   </div>
 
   <div class="hero-trust">
     <span>✔️ Cotizaciones reales</span>
     <span>✔️ Proveedores verificados</span>
-    <span>✔️ Pago seguro</span>
-  </div>
-</section>
+    <s
 
-<!-- BENEFICIOS -->
-<section>
-  <h2>¿Por qué elegir Táctika Consulting?</h2>
-  <div class="grid">
-    <div class="box">⏱️ Ahorra horas de búsqueda</div>
-    <div class="box">💰 Evita sobreprecios</div>
-    <div class="box">📊 Comparación clara y objetiva</div>
-    <div class="box">🧠 Compras inteligentes y seguras</div>
-  </div>
-</section>
-
-<!-- CÓMO FUNCIONA -->
-<section>
-  <h2>¿Cómo funciona?</h2>
-  <ol style="max-width:500px;margin:auto;text-align:left;">
-    <li>Nos dices qué producto o servicio necesitas</li>
-    <li>Buscamos 3 cotizaciones reales</li>
-    <li>Eliges la mejor opción y compras</li>
-  </ol>
-</section>
-
-<!-- PRECIOS -->
-<section id="precios">
-  <h2>Planes</h2>
-
-  <div class="grid">
-    <div class="box">
-      <h3>Básico</h3>
-      <p class="precio">$9.990</p>
-      <p>1 producto o servicio</p>
-      <a href="https://mpago.la/27Nxe1T" class="btn-primary">Pagar ahora</a>
-    </div>
-
-    <div class="box destacado">
-      <h3>Estándar</h3>
-      <p class="precio">$19.990</p>
-      <p>Hasta 3 cotizaciones</p>
-      <a href="https://mpago.la/27VNeRU" class="btn-primary">Pagar ahora</a>
-    </div>
-
-    <div class="box">
-      <h3>Premium</h3>
-      <p class="precio">$29.990</p>
-      <p>Servicio personalizado</p>
-      <a href="https://mpago.la/1QiddBU" class="btn-primary">Pagar ahora</a>
-    </div>
-  </div>
-</section>
-
-<!-- GARANTÍA -->
-<section>
-  <h2>Garantía Táctika</h2>
-  <p>
-    Si no encuentras una opción que te sirva,
-    <strong>te devolvemos el dinero</strong>.
-  </p>
-</sect
