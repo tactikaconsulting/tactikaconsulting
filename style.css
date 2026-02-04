@@ -1,36 +1,46 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
   background: #f4f6f9;
   color: #333;
-  line-height: 1.6;
 }
 
-header {
+.header {
   background: #0b1f3a;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 30px 15px;
 }
 
-header h1 {
-  font-size: 32px;
+.header img {
+  max-width: 120px;
+  margin-bottom: 10px;
 }
 
 .hero {
-  text-align: center;
-  padding: 50px 20px;
   background: white;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 .hero h2 {
   font-size: 28px;
   margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #0b1f3a;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 .benefits {
@@ -40,12 +50,12 @@ header h1 {
   padding: 40px 20px;
 }
 
-.card {
+.box {
   background: white;
   padding: 25px;
-  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
 
 .plans {
@@ -54,25 +64,19 @@ header h1 {
   text-align: center;
 }
 
-.plans h2 {
-  margin-bottom: 30px;
+.plan-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .plan {
-  display: inline-block;
   background: white;
-  margin: 10px;
   padding: 25px;
-  width: 250px;
+  width: 240px;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-.plan span {
-  display: block;
-  margin-top: 10px;
-  font-size: 22px;
-  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
 
 .destacado {
@@ -84,49 +88,27 @@ header h1 {
   padding: 50px 20px;
 }
 
-.form-section h2 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
 form {
   max-width: 500px;
   margin: auto;
 }
 
-label {
-  margin-top: 15px;
-  display: block;
-  font-weight: bold;
-}
-
-input, select, textarea {
+input, select, textarea, button {
   width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+  padding: 12px;
+  margin-top: 10px;
 }
 
 button {
-  margin-top: 20px;
-  width: 100%;
   background: #0b1f3a;
   color: white;
   border: none;
-  padding: 15px;
-  font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-button:hover {
-  background: #16345f;
-}
-
-footer {
+.footer {
   background: #0b1f3a;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
 }
-
