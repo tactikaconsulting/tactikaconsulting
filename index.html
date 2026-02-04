@@ -2,156 +2,101 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Táctika Consulting | Cotizaciones Inteligentes</title>
+  <title>Táctika Consulting | Compra Inteligente</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Servicio profesional de cotizaciones. Te entregamos 3 opciones reales para que compres mejor, sin perder tiempo ni dinero.">
+  <meta name="description" content="Te entregamos 3 cotizaciones comparadas para que elijas la mejor opción en productos y servicios.">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="hero">
-  <div class="container">
-    <span class="logo">TÁCTIKA CONSULTING</span>
-    <h1>Tomamos tus decisiones de compra con criterio profesional</h1>
-    <p>Analizamos y comparamos <strong>3 cotizaciones reales</strong> para que elijas con datos, no con dudas.</p>
-    <a href="#cotizar" class="btn">Solicitar cotización</a>
-  </div>
+<header>
+  <h1>Táctika Consulting</h1>
+  <p>Compra Inteligente · 3 Cotizaciones · Mejor Decisión</p>
 </header>
 
-<section>
-  <div class="container">
-    <h2>¿Por qué elegir Táctika Consulting?</h2>
-    <div class="grid">
-      <div>✔ Ahorro de tiempo en búsquedas</div>
-      <div>✔ Comparación objetiva de proveedores</div>
-      <div>✔ Decisiones respaldadas con datos</div>
-      <div>✔ Acompañamiento humano y real</div>
-    </div>
+<section class="hero">
+  <h2>Nosotros cotizamos, tú eliges</h2>
+  <p>
+    Buscamos y comparamos <strong>3 cotizaciones reales</strong> del producto o servicio que necesitas,
+    para que tomes la mejor decisión sin perder tiempo.
+  </p>
+</section>
+
+<section class="benefits">
+  <div class="card">
+    <h3>🔍 Búsqueda Experta</h3>
+    <p>Analizamos precios, proveedores y condiciones reales.</p>
+  </div>
+  <div class="card">
+    <h3>📊 Comparación Clara</h3>
+    <p>Recibes 3 opciones explicadas de forma simple.</p>
+  </div>
+  <div class="card">
+    <h3>💰 Ahorro Asegurado</h3>
+    <p>Evitas sobreprecios y malas decisiones.</p>
   </div>
 </section>
 
-<section class="light">
-  <div class="container">
-    <h2>Cómo funciona el servicio</h2>
-    <div class="grid">
-      <div>
-        <h3>1. Nos dices qué necesitas</h3>
-        <p>Producto, servicio, arriendo o compra.</p>
-      </div>
-      <div>
-        <h3>2. Buscamos 3 cotizaciones</h3>
-        <p>Proveedores reales y comparables.</p>
-      </div>
-      <div>
-        <h3>3. Te enviamos el análisis</h3>
-        <p>Resumen claro para decidir rápido.</p>
-      </div>
-    </div>
+<section class="plans">
+  <h2>Planes de Cotización</h2>
+
+  <div class="plan">
+    <h3>Básico</h3>
+    <p>3 cotizaciones simples</p>
+    <span>$9.990</span>
+  </div>
+
+  <div class="plan destacado">
+    <h3>Intermedio</h3>
+    <p>3 cotizaciones + recomendación</p>
+    <span>$19.990</span>
+  </div>
+
+  <div class="plan">
+    <h3>Premium</h3>
+    <p>3 cotizaciones + análisis completo</p>
+    <span>$29.990</span>
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <h2>Planes disponibles</h2>
-    <p class="subtitulo">Todos incluyen <strong>3 cotizaciones</strong></p>
+<section class="form-section" id="cotizar">
+  <h2>Solicitar Cotización</h2>
 
-    <div class="grid">
-      <div class="plan">
-        <h3>Básico</h3>
-        <p class="precio">$9.990</p>
-        <ul>
-          <li>✔ 3 cotizaciones</li>
-          <li>✔ Productos o servicios simples</li>
-          <li>✔ Entrega por correo</li>
-        </ul>
-      </div>
+  <form action="https://formsubmit.co/contacto@tactikaconsulting.com" method="POST">
+    
+    <input type="hidden" name="_captcha" value="false">
 
-      <div class="plan destacado">
-        <h3>Estándar</h3>
-        <p class="precio">$19.990</p>
-        <ul>
-          <li>✔ 3 cotizaciones</li>
-          <li>✔ Comparativo detallado</li>
-          <li>✔ Soporte por WhatsApp</li>
-        </ul>
-      </div>
+    <label>Nombre</label>
+    <input type="text" name="nombre" required>
 
-      <div class="plan">
-        <h3>Premium</h3>
-        <p class="precio">$29.990</p>
-        <ul>
-          <li>✔ 3 cotizaciones</li>
-          <li>✔ Análisis calidad / precio</li>
-          <li>✔ Acompañamiento en la compra</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <label>Email</label>
+    <input type="email" name="email" required>
 
-<section class="light">
-  <div class="container">
-    <h2>Quiénes somos</h2>
-    <p>
-      Táctika Consulting nace para ayudar a personas y negocios a tomar mejores decisiones de compra,
-      evitando pérdidas de tiempo, sobreprecios y malas elecciones.
-      Nuestro enfoque es práctico, transparente y orientado a resultados.
-    </p>
-  </div>
-</section>
+    <label>Teléfono</label>
+    <input type="tel" name="telefono" required>
 
-<section>
-  <div class="container">
-    <h2>Lo que dicen nuestros clientes</h2>
-    <div class="grid">
-      <div>
-        <p>“Me ahorraron horas de búsqueda y elegí mejor.”</p>
-        <strong>— Cliente particular</strong>
-      </div>
-      <div>
-        <p>“Servicio claro, rápido y confiable.”</p>
-        <strong>— Emprendedor</strong>
-      </div>
-      <div>
-        <p>“La comparación fue clave para decidir.”</p>
-        <strong>— PyME</strong>
-      </div>
-    </div>
-  </div>
-</section>
+    <label>Tipo de servicio o producto</label>
+    <select name="servicio" required>
+      <option value="">Seleccione una opción</option>
+      <option>Arriendo de departamento o casa</option>
+      <option>Compra de inmueble</option>
+      <option>Compra de auto</option>
+      <option>Servicios técnicos</option>
+      <option>Electrodomésticos</option>
+      <option>Servicios profesionales</option>
+      <option>Otro producto o servicio</option>
+    </select>
 
-<section class="light">
-  <div class="container">
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq">
-      <p><strong>¿Cuánto demora el servicio?</strong><br>Entre 24 y 72 horas según complejidad.</p>
-      <p><strong>¿Las cotizaciones son reales?</strong><br>Sí, de proveedores activos y verificables.</p>
-      <p><strong>¿Puedo cotizar cualquier cosa?</strong><br>Sí, productos, servicios, compras o arriendos.</p>
-    </div>
-  </div>
-</section>
+    <label>Detalle de lo que necesitas</label>
+    <textarea name="detalle" rows="4" required></textarea>
 
-<section id="cotizar" class="formulario">
-  <div class="container">
-    <h2>Solicitar cotización</h2>
-
-    <form action="https://formsubmit.co/contacto@tactikaconsulting.com" method="POST">
-      <input type="text" name="name" placeholder="Nombre completo" required>
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <textarea name="message" placeholder="¿Qué necesitas cotizar?" required></textarea>
-      <input type="hidden" name="_captcha" value="false">
-      <button type="submit">Enviar solicitud</button>
-    </form>
-
-    <a class="whatsapp" href="https://wa.me/56964295330" target="_blank">
-      💬 Cotizar por WhatsApp
-    </a>
-  </div>
+    <button type="submit">Solicitar mis 3 cotizaciones</button>
+  </form>
 </section>
 
 <footer>
-  <p>© 2026 Táctika Consulting · Decisiones inteligentes</p>
+  <p>📧 contacto@tactikaconsulting.com | 📱 +56 9 6429 5330</p>
+  <p>© 2026 Táctika Consulting</p>
 </footer>
 
 </body>
