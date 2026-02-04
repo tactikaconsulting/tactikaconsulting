@@ -1,150 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-:root {
-  --primary:#0f172a;
-  --accent:#22c55e;
-  --gray:#64748b;
-  --light:#f8fafc;
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
-* { box-sizing: border-box; }
 
 body {
-  margin:0;
-  font-family:'Inter',sans-serif;
-  color:var(--primary);
-  line-height:1.6;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-.container {
-  max-width:1100px;
-  margin:auto;
+header {
+  background: #0b1f3a;
+  color: #fff;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h1 {
+  font-size: 32px;
 }
 
 .hero {
-  background:linear-gradient(135deg,#020617,#0f172a);
-  color:white;
-  padding:110px 20px;
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
 }
 
-.logo {
-  letter-spacing:2px;
-  font-size:.9rem;
-  opacity:.8;
-  font-weight:700;
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
-.hero h1 {
-  font-size:3rem;
-  max-width:750px;
-  margin:20px 0;
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
 }
 
-.hero p {
-  font-size:1.2rem;
-  max-width:650px;
-  color:#cbd5f5;
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-.btn {
-  display:inline-block;
-  background:var(--accent);
-  color:#020617;
-  padding:16px 34px;
-  border-radius:8px;
-  font-weight:600;
-  text-decoration:none;
-  margin-top:30px;
+.plans {
+  background: #eef2f7;
+  padding: 50px 20px;
+  text-align: center;
 }
 
-section {
-  padding:80px 20px;
-}
-
-.light {
-  background:var(--light);
-}
-
-h2 {
-  font-size:2.2rem;
-}
-
-.subtitulo {
-  color:var(--gray);
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-
-.grid div {
-  background:white;
-  padding:30px;
-  border-radius:16px;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
+.plans h2 {
+  margin-bottom: 30px;
 }
 
 .plan {
-  padding:40px;
-  border-radius:18px;
-  background:white;
-  box-shadow:0 18px 45px rgba(0,0,0,.1);
+  display: inline-block;
+  background: white;
+  margin: 10px;
+  padding: 25px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.plan span {
+  display: block;
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .destacado {
-  outline:4px solid var(--accent);
+  border: 2px solid #0b1f3a;
 }
 
-.precio {
-  font-size:2rem;
-  font-weight:700;
+.form-section {
+  background: white;
+  padding: 50px 20px;
 }
 
-.plan ul {
-  list-style:none;
-  padding:0;
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.plan ul li {
-  margin:12px 0;
+form {
+  max-width: 500px;
+  margin: auto;
 }
 
-.formulario input,
-.formulario textarea {
-  width:100%;
-  max-width:520px;
-  padding:16px;
-  margin:10px auto;
-  display:block;
-  border-radius:8px;
-  border:1px solid #e5e7eb;
+label {
+  margin-top: 15px;
+  display: block;
+  font-weight: bold;
 }
 
-.formulario button {
-  padding:16px 40px;
-  background:var(--primary);
-  color:white;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  margin-top:20px;
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
 }
 
-.whatsapp {
-  display:block;
-  margin-top:30px;
-  color:#25d366;
-  font-weight:600;
-  text-decoration:none;
+button {
+  margin-top: 20px;
+  width: 100%;
+  background: #0b1f3a;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #16345f;
 }
 
 footer {
-  background:#020617;
-  color:#94a3b8;
-  text-align:center;
-  padding:30px;
-  font-size:.9rem;
+  background: #0b1f3a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
+
