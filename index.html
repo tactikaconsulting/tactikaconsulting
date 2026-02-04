@@ -2,60 +2,65 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Táctika Consulting | Compra Inteligente</title>
+  <title>Táctika Consulting | 3 Cotizaciones Inteligentes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Te entregamos 3 cotizaciones comparadas para que elijas la mejor opción en productos y servicios.">
+  <meta name="description" content="Te entregamos 3 cotizaciones comparadas para que elijas la mejor opción sin perder tiempo.">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>Táctika Consulting</h1>
-  <p>Compra Inteligente · 3 Cotizaciones · Mejor Decisión</p>
+<header class="header">
+  <img src="logo.png" alt="Táctika Consulting">
+  <h1>Compra Inteligente</h1>
+  <p>Nosotros cotizamos · Tú decides</p>
 </header>
 
 <section class="hero">
-  <h2>Nosotros cotizamos, tú eliges</h2>
+  <h2>Recibe 3 cotizaciones reales</h2>
   <p>
-    Buscamos y comparamos <strong>3 cotizaciones reales</strong> del producto o servicio que necesitas,
-    para que tomes la mejor decisión sin perder tiempo.
+    Buscamos, comparamos y analizamos <strong>3 opciones</strong> del producto o servicio que necesitas,
+    para que tomes la mejor decisión sin estrés.
   </p>
+  <a href="#cotizar" class="btn">Solicitar cotización</a>
 </section>
 
 <section class="benefits">
-  <div class="card">
-    <h3>🔍 Búsqueda Experta</h3>
-    <p>Analizamos precios, proveedores y condiciones reales.</p>
+  <div class="box">
+    <h3>🔍 Análisis</h3>
+    <p>Evaluamos precio, proveedor y condiciones.</p>
   </div>
-  <div class="card">
-    <h3>📊 Comparación Clara</h3>
-    <p>Recibes 3 opciones explicadas de forma simple.</p>
+  <div class="box">
+    <h3>📊 Comparación</h3>
+    <p>Te mostramos 3 alternativas claras.</p>
   </div>
-  <div class="card">
-    <h3>💰 Ahorro Asegurado</h3>
-    <p>Evitas sobreprecios y malas decisiones.</p>
+  <div class="box">
+    <h3>💰 Ahorro</h3>
+    <p>Evitas sobrepagar y malas decisiones.</p>
   </div>
 </section>
 
 <section class="plans">
-  <h2>Planes de Cotización</h2>
+  <h2>Planes</h2>
 
-  <div class="plan">
-    <h3>Básico</h3>
-    <p>3 cotizaciones simples</p>
-    <span>$9.990</span>
-  </div>
+  <div class="plan-grid">
+    <div class="plan">
+      <h3>Básico</h3>
+      <p>3 cotizaciones simples</p>
+      <span>$9.990</span>
+    </div>
 
-  <div class="plan destacado">
-    <h3>Intermedio</h3>
-    <p>3 cotizaciones + recomendación</p>
-    <span>$19.990</span>
-  </div>
+    <div class="plan destacado">
+      <h3>Intermedio</h3>
+      <p>3 cotizaciones + recomendación</p>
+      <span>$19.990</span>
+    </div>
 
-  <div class="plan">
-    <h3>Premium</h3>
-    <p>3 cotizaciones + análisis completo</p>
-    <span>$29.990</span>
+    <div class="plan">
+      <h3>Premium</h3>
+      <p>3 cotizaciones + análisis completo</p>
+      <span>$29.990</span>
+    </div>
   </div>
 </section>
 
@@ -63,41 +68,34 @@
   <h2>Solicitar Cotización</h2>
 
   <form action="https://formsubmit.co/contacto@tactikaconsulting.com" method="POST">
-    
     <input type="hidden" name="_captcha" value="false">
 
-    <label>Nombre</label>
-    <input type="text" name="nombre" required>
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="tel" name="telefono" placeholder="Teléfono" required>
 
-    <label>Email</label>
-    <input type="email" name="email" required>
-
-    <label>Teléfono</label>
-    <input type="tel" name="telefono" required>
-
-    <label>Tipo de servicio o producto</label>
     <select name="servicio" required>
-      <option value="">Seleccione una opción</option>
-      <option>Arriendo de departamento o casa</option>
+      <option value="">Tipo de servicio o producto</option>
+      <option>Arriendo de inmueble</option>
       <option>Compra de inmueble</option>
-      <option>Compra de auto</option>
+      <option>Compra de vehículo</option>
       <option>Servicios técnicos</option>
       <option>Electrodomésticos</option>
       <option>Servicios profesionales</option>
-      <option>Otro producto o servicio</option>
+      <option>Otro</option>
     </select>
 
-    <label>Detalle de lo que necesitas</label>
-    <textarea name="detalle" rows="4" required></textarea>
+    <textarea name="detalle" placeholder="Describe lo que necesitas" required></textarea>
 
-    <button type="submit">Solicitar mis 3 cotizaciones</button>
+    <button type="submit">Recibir mis 3 cotizaciones</button>
   </form>
 </section>
 
-<footer>
+<footer class="footer">
   <p>📧 contacto@tactikaconsulting.com | 📱 +56 9 6429 5330</p>
   <p>© 2026 Táctika Consulting</p>
 </footer>
 
 </body>
 </html>
+
