@@ -20,19 +20,19 @@
   <h2>Nosotros cotizamos, tú eliges</h2>
   <p>
     Buscamos y comparamos <strong>3 cotizaciones reales</strong> del producto o servicio que necesitas,
-    para que tomes la mejor decisión sin perder tiempo.
+    para que tomes la mejor decisión sin perder tiempo ni dinero.
   </p>
   <a href="#cotizar" class="btn">Solicitar cotización</a>
 </section>
 
 <section class="benefits">
   <div class="box">
-    <h3>🔍 Búsqueda experta</h3>
-    <p>Analizamos proveedores, precios y condiciones reales.</p>
+    <h3>🔍 Análisis experto</h3>
+    <p>Evaluamos precios, proveedores y condiciones.</p>
   </div>
   <div class="box">
     <h3>📊 Comparación clara</h3>
-    <p>Recibes 3 opciones explicadas de forma simple.</p>
+    <p>Te entregamos 3 opciones simples de entender.</p>
   </div>
   <div class="box">
     <h3>💰 Ahorro real</h3>
@@ -44,7 +44,6 @@
   <h2>Planes de cotización</h2>
 
   <div class="plan-grid">
-
     <div class="plan">
       <h3>Básico</h3>
       <p>3 cotizaciones simples</p>
@@ -65,15 +64,61 @@
       <span>$29.990</span>
       <a class="pay" href="https://mpago.la/1QiddBU" target="_blank">Pagar</a>
     </div>
-
   </div>
 </section>
 
 <section class="form-section" id="cotizar">
   <h2>Solicitar Cotización</h2>
 
-  <form action="https://formsubmit.co/contacto@tactikaconsulting.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
+  <div class="form-card">
+    <form action="https://formsubmit.co/contacto@tactikaconsulting.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
 
-    <input type="text" name="nombre" placeholder="Nombre completo" required>
-    <input type="email" name="email" placeholder
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" name="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="tel" name="telefono" required>
+      </div>
+
+      <div class="form-group">
+        <label>Producto o servicio</label>
+        <select name="servicio" required>
+          <option value="">Seleccione una opción</option>
+          <option>Arriendo de inmueble</option>
+          <option>Compra de inmueble</option>
+          <option>Compra de vehículo</option>
+          <option>Servicios técnicos</option>
+          <option>Electrodomésticos</option>
+          <option>Servicios profesionales</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Detalle de lo que necesitas</label>
+        <textarea name="detalle" rows="4" required></textarea>
+      </div>
+
+      <button type="submit">Recibir mis 3 cotizaciones</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>📧 contacto@tactikaconsulting.com | 📱 +56 9 6429 5330</p>
+  <p>© 2026 Táctika Consulting</p>
+</footer>
+
+<a href="https://wa.me/56964295330" class="whatsapp" target="_blank">💬</a>
+
+</body>
+</html>
