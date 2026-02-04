@@ -3,258 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Táctika Consulting | Compra Inteligente</title>
-  <meta name="description" content="Te ayudamos a comprar o arrendar de forma inteligente. Comparamos, cotizamos y tú decides.">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  <title>Táctika Consulting | Cotizaciones Inteligentes</title>
+  <meta name="description" content="Cotizamos por ti productos y servicios. Ahorra tiempo, dinero y toma mejores decisiones con Cotizaciones Inteligentes.">
 
-    body {
-      background: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header {
-      background: #0b2a4a;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #0b2a4a;
-    }
-
-    /* SERVICIOS */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 25px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #0b2a4a;
-    }
-
-    /* PRECIOS */
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .price-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      border-top: 6px solid #0b2a4a;
-    }
-
-    .price-card h3 {
-      margin-bottom: 15px;
-      color: #0b2a4a;
-    }
-
-    .price {
-      font-size: 2rem;
-      font-weight: bold;
-      margin: 15px 0;
-      color: #111;
-    }
-
-    .price-card ul {
-      list-style: none;
-      margin-bottom: 20px;
-    }
-
-    .price-card ul li {
-      margin: 8px 0;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #0b2a4a;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #14406d;
-    }
-
-    /* FORMULARIO */
-    form {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: auto;
-    }
-
-    form label {
-      display: block;
-      margin: 15px 0 5px;
-      font-weight: bold;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    form textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    footer {
-      background: #0b2a4a;
-      color: #fff;
-      text-align: center;
-      padding: 25px;
-      margin-top: 50px;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-<header>
-  <h1>Táctika Consulting</h1>
-  <p>Compra y arriendo inteligente · Nosotros cotizamos, tú decides</p>
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-content">
+    <div class="logo">Táctika Consulting</div>
+    <a href="https://wa.me/56964295330" class="btn-nav" target="_blank">WhatsApp</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <h1>Cotizaciones Inteligentes</h1>
+    <p>Te ayudamos a comparar precios, elegir la mejor opción y evitar malas decisiones.</p>
+    <div class="hero-buttons">
+      <a href="#precios" class="btn-primary">Ver planes</a>
+      <a href="https://wa.me/56964295330" class="btn-secondary" target="_blank">Hablar ahora</a>
+    </div>
+  </div>
 </header>
 
-<section>
-  <h2>¿Cómo funciona?</h2>
-  <div class="services">
-    <div class="card">
-      <h3>1️⃣ Nos dices qué necesitas</h3>
-      <p>Producto, servicio, compra o arriendo.</p>
-    </div>
-    <div class="card">
-      <h3>2️⃣ Buscamos y comparamos</h3>
-      <p>Analizamos precio, calidad y condiciones.</p>
-    </div>
-    <div class="card">
-      <h3>3️⃣ Tú eliges tranquilo</h3>
-      <p>Te entregamos opciones claras y reales.</p>
+<!-- COMO FUNCIONA -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">¿Cómo funciona?</h2>
+    <div class="grid-4">
+      <div class="card">1️⃣ Nos cuentas qué necesitas</div>
+      <div class="card">2️⃣ Buscamos proveedores reales</div>
+      <div class="card">3️⃣ Te entregamos opciones claras</div>
+      <div class="card">4️⃣ Tú eliges con seguridad</div>
     </div>
   </div>
 </section>
 
-<section>
-  <h2>Planes y precios</h2>
-  <div class="pricing">
-
-    <div class="price-card">
-      <h3>Básico</h3>
-      <div class="price">$9.990</div>
-      <ul>
-        <li>1 cotización</li>
-        <li>Comparación simple</li>
-        <li>Respuesta rápida</li>
-      </ul>
-      <a class="btn" href="https://mpago.la/27Nxe1T" target="_blank">Pagar</a>
+<!-- BENEFICIOS -->
+<section class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">¿Por qué usar Táctika?</h2>
+    <div class="grid-3">
+      <div class="card">⏱ Ahorro de tiempo</div>
+      <div class="card">💰 Ahorro de dinero</div>
+      <div class="card">📊 Decisiones informadas</div>
     </div>
-
-    <div class="price-card">
-      <h3>Estándar</h3>
-      <div class="price">$19.990</div>
-      <ul>
-        <li>2–3 cotizaciones</li>
-        <li>Análisis comparativo</li>
-        <li>Recomendación</li>
-      </ul>
-      <a class="btn" href="https://mpago.la/27VNeRU" target="_blank">Pagar</a>
-    </div>
-
-    <div class="price-card">
-      <h3>Premium</h3>
-      <div class="price">$29.990</div>
-      <ul>
-        <li>Cotización completa</li>
-        <li>Análisis profesional</li>
-        <li>Acompañamiento</li>
-      </ul>
-      <a class="btn" href="https://mpago.la/1QiddBU" target="_blank">Pagar</a>
-    </div>
-
   </div>
 </section>
 
-<section>
-  <h2>Solicita tu cotización</h2>
+<!-- PRECIOS -->
+<section class="section" id="precios">
+  <div class="container">
+    <h2 class="section-title">Planes y precios</h2>
 
-  <!-- FORMULARIO (puedes conectar a Google Forms o Formspree) -->
-  <form action="https://formspree.io/f/xbldnqzd" method="POST">
-    <label>Nombre</label>
-    <input type="text" name="nombre" required>
+    <div class="grid-3">
+      <div class="price-card">
+        <h3>Básico</h3>
+        <p class="price">$9.990</p>
+        <p>1 cotización simple</p>
+        <a href="https://mpago.la/27NxeRU" target="_blank" class="btn-primary">Pagar</a>
+      </div>
 
-    <label>Email</label>
-    <input type="email" name="email" required>
+      <div class="price-card destacado">
+        <h3>Estándar</h3>
+        <p class="price">$19.990</p>
+        <p>2 cotizaciones comparativas</p>
+        <a href="https://mpago.la/27VNeRU" target="_blank" class="btn-primary">Pagar</a>
+      </div>
 
-    <label>¿Qué necesitas cotizar?</label>
-    <textarea name="mensaje" required></textarea>
-
-    <br><br>
-    <button class="btn" type="submit">Enviar solicitud</button>
-  </form>
+      <div class="price-card">
+        <h3>Premium</h3>
+        <p class="price">$29.990</p>
+        <p>3 cotizaciones + recomendación</p>
+        <a href="https://mpago.la/1QiddBU" target="_blank" class="btn-primary">Pagar</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p>
-    © 2026 Táctika Consulting ·  
-    <a href="mailto:contacto@tactikaconsulting.com">contacto@tactikaconsulting.com</a> ·  
-    WhatsApp +56 9 6429 5330
-  </p>
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>¿Tienes dudas?</h2>
+    <p>Escríbenos y te orientamos gratis antes de pagar.</p>
+    <a href="https://wa.me/56964295330" target="_blank" class="btn-primary">Hablar por WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Táctika Consulting</p>
+  <p>contacto@tactikaconsulting.com</p>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
+
