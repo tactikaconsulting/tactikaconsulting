@@ -1,164 +1,150 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root {
-  --primary: #0f172a;
-  --accent: #22c55e;
-  --gray: #64748b;
-  --light: #f8fafc;
+  --primary:#0f172a;
+  --accent:#22c55e;
+  --gray:#64748b;
+  --light:#f8fafc;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: var(--primary);
-  line-height: 1.6;
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:var(--primary);
+  line-height:1.6;
 }
 
-/* CONTENEDOR */
 .container {
-  max-width: 1100px;
-  margin: auto;
+  max-width:1100px;
+  margin:auto;
 }
 
-/* HERO */
 .hero {
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: white;
-  padding: 100px 20px;
+  background:linear-gradient(135deg,#020617,#0f172a);
+  color:white;
+  padding:110px 20px;
 }
 
 .logo {
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  letter-spacing:2px;
+  font-size:.9rem;
+  opacity:.8;
+  font-weight:700;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  max-width: 700px;
-  margin: 20px 0;
+  font-size:3rem;
+  max-width:750px;
+  margin:20px 0;
 }
 
 .hero p {
-  max-width: 600px;
-  color: #cbd5f5;
-  font-size: 1.2rem;
+  font-size:1.2rem;
+  max-width:650px;
+  color:#cbd5f5;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 30px;
-  background: var(--accent);
-  color: #020617;
-  padding: 16px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
+  display:inline-block;
+  background:var(--accent);
+  color:#020617;
+  padding:16px 34px;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  margin-top:30px;
 }
 
-/* SECCIONES */
 section {
-  padding: 80px 20px;
+  padding:80px 20px;
+}
+
+.light {
+  background:var(--light);
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size:2.2rem;
 }
 
 .subtitulo {
-  color: var(--gray);
+  color:var(--gray);
 }
 
-/* GRID */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:40px;
 }
 
 .grid div {
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-/* PLANES */
-.planes {
-  background: var(--light);
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .plan {
-  padding: 40px;
-  border-radius: 16px;
-  background: white;
-  box-shadow: 0 15px 40px rgba(0,0,0,.1);
-}
-
-.plan h3 {
-  font-size: 1.4rem;
-}
-
-.precio {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.plan ul {
-  list-style: none;
-  padding: 0;
-}
-
-.plan ul li {
-  margin: 12px 0;
+  padding:40px;
+  border-radius:18px;
+  background:white;
+  box-shadow:0 18px 45px rgba(0,0,0,.1);
 }
 
 .destacado {
-  outline: 3px solid var(--accent);
+  outline:4px solid var(--accent);
 }
 
-/* FORMULARIO */
+.precio {
+  font-size:2rem;
+  font-weight:700;
+}
+
+.plan ul {
+  list-style:none;
+  padding:0;
+}
+
+.plan ul li {
+  margin:12px 0;
+}
+
 .formulario input,
 .formulario textarea {
-  width: 100%;
-  max-width: 500px;
-  padding: 16px;
-  margin: 10px auto;
-  display: block;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  font-family: inherit;
+  width:100%;
+  max-width:520px;
+  padding:16px;
+  margin:10px auto;
+  display:block;
+  border-radius:8px;
+  border:1px solid #e5e7eb;
 }
 
 .formulario button {
-  margin-top: 20px;
-  padding: 16px 40px;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  padding:16px 40px;
+  background:var(--primary);
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:20px;
 }
 
 .whatsapp {
-  display: block;
-  margin-top: 30px;
-  font-weight: 600;
-  color: #25d366;
-  text-decoration: none;
+  display:block;
+  margin-top:30px;
+  color:#25d366;
+  font-weight:600;
+  text-decoration:none;
 }
 
-/* FOOTER */
 footer {
-  background: #020617;
-  color: #94a3b8;
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9rem;
+  background:#020617;
+  color:#94a3b8;
+  text-align:center;
+  padding:30px;
+  font-size:.9rem;
 }
