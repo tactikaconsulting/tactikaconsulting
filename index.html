@@ -2,123 +2,82 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Táctika Consulting | Cotizaciones Inteligentes</title>
-
-  <meta name="description" content="Servicio profesional de cotizaciones inteligentes. Comparamos precios y te ayudamos a tomar la mejor decisión.">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav class="navbar">
-  <div class="container nav-flex">
-    <div class="logo">Táctika Consulting</div>
-    <a href="https://wa.me/56964295330" target="_blank" class="btn-nav">WhatsApp</a>
-  </div>
-</nav>
+<header class="hero">
+  <h1>Compra Inteligente con 3 Cotizaciones</h1>
+  <p>Buscamos, comparamos y te entregamos las mejores opciones para que solo elijas.</p>
+  <a href="#cotizar" class="btn">Solicitar Cotización</a>
+</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-box">
-    <h1>Cotizaciones Inteligentes</h1>
-    <p>Recibe <strong>3 cotizaciones reales</strong> y elige con seguridad sin perder tiempo ni dinero.</p>
-    <a href="#formulario" class="btn-primary">Solicitar cotización</a>
-  </div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">¿Cómo funciona?</h2>
-    <div class="grid">
-      <div class="card">1️⃣ Nos indicas qué necesitas</div>
-      <div class="card">2️⃣ Cotizamos con proveedores reales</div>
-      <div class="card">3️⃣ Te entregamos 3 opciones claras</div>
-      <div class="card">4️⃣ Tú decides tranquilo</div>
-    </div>
+<section class="beneficios">
+  <h2>¿Cómo funciona?</h2>
+  <div class="grid">
+    <div>📝 Nos dices qué necesitas</div>
+    <div>🔍 Buscamos 3 cotizaciones reales</div>
+    <div>📊 Te enviamos el comparativo</div>
+    <div>✅ Tú eliges la mejor opción</div>
   </div>
 </section>
 
-<!-- PLANES -->
-<section class="section light">
-  <div class="container">
-    <h2 class="section-title">Planes</h2>
+<section class="planes">
+  <h2>Planes (Todos incluyen 3 cotizaciones)</h2>
 
-    <div class="pricing">
+  <div class="plan">
+    <h3>Básico</h3>
+    <p>$9.990 CLP</p>
+    <ul>
+      <li>✔ 3 cotizaciones</li>
+      <li>✔ Productos o servicios simples</li>
+      <li>✔ Entrega por correo</li>
+    </ul>
+  </div>
 
-      <div class="price-card">
-        <h3>Básico</h3>
-        <p class="price">$9.990</p>
-        <ul>
-          <li>✔ 3 cotizaciones</li>
-          <li>✔ Entrega simple</li>
-          <li>✔ Ahorro de tiempo</li>
-        </ul>
-        <a href="https://mpago.la/27NxeRU" target="_blank" class="btn-primary">Pagar</a>
-      </div>
+  <div class="plan destacado">
+    <h3>Estándar</h3>
+    <p>$19.990 CLP</p>
+    <ul>
+      <li>✔ 3 cotizaciones</li>
+      <li>✔ Comparativo detallado</li>
+      <li>✔ Asesoría por WhatsApp</li>
+    </ul>
+  </div>
 
-      <div class="price-card featured">
-        <h3>Estándar</h3>
-        <p class="price">$19.990</p>
-        <ul>
-          <li>✔ 3 cotizaciones</li>
-          <li>✔ Comparativa clara</li>
-          <li>✔ Mejor decisión</li>
-        </ul>
-        <a href="https://mpago.la/27VNeRU" target="_blank" class="btn-primary">Pagar</a>
-      </div>
-
-      <div class="price-card">
-        <h3>Premium</h3>
-        <p class="price">$29.990</p>
-        <ul>
-          <li>✔ 3 cotizaciones</li>
-          <li>✔ Análisis experto</li>
-          <li>✔ Recomendación final</li>
-        </ul>
-        <a href="https://mpago.la/1QiddBU" target="_blank" class="btn-primary">Pagar</a>
-      </div>
-
-    </div>
+  <div class="plan">
+    <h3>Premium</h3>
+    <p>$29.990 CLP</p>
+    <ul>
+      <li>✔ 3 cotizaciones</li>
+      <li>✔ Análisis calidad/precio</li>
+      <li>✔ Acompañamiento en la compra</li>
+    </ul>
   </div>
 </section>
 
-<!-- FORMULARIO -->
-<section class="section" id="formulario">
-  <div class="container">
-    <h2 class="section-title">Solicitar cotización</h2>
+<section id="cotizar" class="formulario">
+  <h2>Solicitar Cotización</h2>
 
-    <!-- FORMULARIO GOOGLE -->
-    <iframe 
-      src="PEGA_AQUI_TU_LINK_DE_GOOGLE_FORM"
-      width="100%" 
-      height="650" 
-      frameborder="0">
-    </iframe>
-  </div>
+  <form action="https://formsubmit.co/contacto@tactikaconsulting.com" method="POST">
+    <input type="text" name="name" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Correo" required>
+    <textarea name="message" placeholder="¿Qué necesitas cotizar?" required></textarea>
+
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Enviar Solicitud</button>
+  </form>
+
+  <a class="whatsapp" href="https://wa.me/56964295330" target="_blank">
+    💬 Cotizar por WhatsApp
+  </a>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <h2>¿Tienes dudas?</h2>
-    <p>Te orientamos gratis antes de contratar.</p>
-    <a href="https://wa.me/56964295330" class="btn-primary" target="_blank">
-      Hablar por WhatsApp
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
+<footer>
   <p>© 2026 Táctika Consulting</p>
-  <p>contacto@tactikaconsulting.com</p>
 </footer>
 
 </body>
 </html>
-
